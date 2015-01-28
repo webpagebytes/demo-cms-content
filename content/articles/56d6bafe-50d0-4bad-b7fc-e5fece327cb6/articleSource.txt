@@ -1,0 +1,18 @@
+<p>
+	 Localization is supported by Webpagebytes CMS through urls containing the locale identifier and through 'Messages' that are small text fragments translated in each language supported by the application. 
+</p>
+<p>
+	 <br />
+</p>
+<p>
+	 The text 'Site language' below is a site message and has a value for English and one value for French.  
+</p>
+<p>
+	 <br />
+</p>
+<p>
+	 Webpagebytes CMS supports all languages, this demo application has enabled only English and French. 
+</p>
+<p>
+	 <br />
+</p>

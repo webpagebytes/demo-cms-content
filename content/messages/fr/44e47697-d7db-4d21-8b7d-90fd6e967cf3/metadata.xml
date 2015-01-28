@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">Error.password.length</entry>
+<entry key="lastModified">1412843079462</entry>
+<entry key="lcid">fr</entry>
+<entry key="value">Mot de passe trop long</entry>
+<entry key="externalKey">44e47697-d7db-4d21-8b7d-90fd6e967cf3</entry>
+</properties>

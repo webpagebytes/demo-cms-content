@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">Error.amount.format</entry>
+<entry key="lastModified">1404936766945</entry>
+<entry key="lcid">en</entry>
+<entry key="value">Invalid amount value</entry>
+<entry key="externalKey">61480d63-c8cf-4d63-b566-bc4ef768d22d</entry>
+</properties>

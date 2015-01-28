@@ -1,0 +1,38 @@
+<#assign basePath=wpbRequest["WPB_GLOBAL_BASE_URL"] >
+<nav class="header">
+	<div class="logo"> <a href="http://webpagebytes.com"> webpagebytes </a> </div>
+	<div class="menu">
+		<ul class="menu-list">
+			<li> <a href="${basePath}/../getting-started"> Getting started </a> </li>
+                        <li> <a href="${basePath}/../installation"> Installation </a> </li>
+			<li class="sel"> <a href="${basePath}/"> Demo application </a> </li>
+			<li> <a href="${basePath}/../doc/start"> Documentation </a> </li>
+			<li> <a href=""> Download </a> </li>
+		</ul>
+	</div> 
+       <div class="clear"></div">
+</nav>
+<#assign loginUserName=wpbAppModel["loginUserName"]!"" /> 
+<div class="sample-header">
+    <span class="text">
+        &#187; ${wpbMessages["Header.logo"]}
+    </span>
+</div>
+</div class="clear"></div>
+<div class="app-header">
+<#if (loginUserName?length==0) >
+     <div class="app-header-info"> <a href="./login">${wpbMessages["Header.login"]}</a> | <a href="./register"> ${wpbMessages["Header.signup"]} </a> </div>
+<#else>
+    <div class="app-header-info"> ${wpbFormatText(wpbMessages["Header.hi"],  loginUserName)?html} | <a href="./logout">${wpbMessages["Header.logout"]}</a>  </div>
+</#if>
+<div class="app-header-languages"> 
+                       <span class="why"> ${wpbMessages["General.whats.this"]?html} 
+                                              <span class="why-details">
+                                                 <div class="text">
+                                                    <@wpbArticle externalKey="56d6bafe-50d0-4bad-b7fc-e5fece327cb6" title="what's this - localization" />
+                                                 </div>
+                                              </span>
+                       </span>
+${wpbMessages["Header.language"]} <a href="${basePath}/en/language"> ${wpbMessages["Header.english"]} </a> | <a href="${basePath}/fr/language"> ${wpbMessages["Header.french"]} </a> </div>
+</div>
+<div class="clear"></div>

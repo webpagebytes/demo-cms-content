@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="enabled">1</entry>
+<entry key="resourceExternalKey"></entry>
+<entry key="lastModified">1419947761564</entry>
+<entry key="resourceType">3</entry>
+<entry key="uri">/changeProfile</entry>
+<entry key="httpOperation">GET</entry>
+<entry key="externalKey">e668362d-0862-4781-b66e-868dcfe52bd1</entry>
+<entry key="controllerClass">com.webpagebytes.wpbsample.controllers.GetProfileController</entry>
+</properties>

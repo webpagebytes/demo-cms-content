@@ -1,0 +1,93 @@
+<html>
+<@wpbModule externalKey="d7101b49-8369-4d64-ac1e-87bd88c54b9c" name="head" />
+ 
+<body>
+<@wpbModule externalKey="c83c01ce-8696-4726-a6c0-c8575e829db7" name="header" />
+
+<div class="accountcontent">
+	<@wpbModule externalKey="1a084d80-8679-4d9d-b49e-ebb5601aee61" name="main-menu" />
+	<div class="menudetails">
+              <div class="detailsinner">
+                        <@wpbModule externalKey="cbd75bd6-95b8-49c1-85df-269e8a2138fd" name="app-warning" />
+			<div class="htitle">
+				<div class="message">  ${wpbMessages["Menu.statements"]?html} - ${wpbMessages["Menu.withdrawals"]?html}
+                                           <span class="why"> ${wpbMessages["General.whats.this"]?html} 
+                                              <span class="why-details">
+                                                 <div class="text">
+                                                    <@wpbArticle externalKey="e47d5772-e283-4620-9c10-27c01b9fc48e" title="what's this - share controllers" />
+                                                 </div>
+                                              </span>
+                                           </span>                                                                
+                                </div>
+                        </div>
+			<div class="text-minor align-right"> 
+                                        <#assign user=wpbAppModel["user"]!{} />
+                                        <#if (user.confirmEmailFlag == 1)>
+                                             <a href="./statements-email" onClick="ga('send', 'event', 'Statements', 'Email', 'Send to email');"> <i class="fa fa-envelope-o fa-2x"></i> ${wpbMessages["General.exportEmail"]?html} </a> 
+                                        <#else>
+                                              <i class="fa fa-envelope-o fa-2x"></i> ${wpbMessages["General.exportEmail"]?html}
+                                              <span class="why"> ?
+                                                  <span class="why-details why-details-left">
+                                                      <div class="text"> 
+                                                          <@wpbArticle externalKey="a5eaf754-e7fa-4f63-91e9-982a39236b16" title="what's this - articles" />
+                                                      </div>
+                                                 </span>
+                                             </span>
+                                        </#if> 
+                                        &nbsp; &nbsp; 
+                                        <a href="./statements-pdf" onClick="ga('send', 'event', 'Statements', 'PDF', 'Download pdf');"> <i class="fa fa-file-pdf-o fa-2x"></i> ${wpbMessages["General.exportPdf"]?html} </a>    
+                        </div>
+			<div class="clear"></div>
+		<div class="">
+			<ul class="horiz-menu statements-menu">
+				<li> <a href="./statements-transactions"> ${wpbMessages["Menu.payments"]?html} </a> </li>
+				<li> <a href="./statements-deposits"> ${wpbMessages["Menu.deposits"]?html} </a> </li>
+				<li class="active"> ${wpbMessages["Menu.withdrawals"]?html} </li>
+			</ul>
+		</div>
+	
+		<table class="table table-grey table-notop">
+                        <#assign withdrawals=wpbAppModel["records"] />
+                        <#assign hasNextPage=wpbAppModel["hasNextPage"] page=wpbAppModel["page"] />
+			<thead>
+				<tr class="row-large-height">
+					<th> ${wpbMessages["General.time"]?html} </th>
+					<th> ${wpbMessages["General.transaction.identifier"]?html} </th>
+					<th> ${wpbMessages["General.amount"]?html} </th>
+                                 </tr>
+			</thead>
+
+                        <#if (withdrawals?size == 0)>
+			    <tr>
+				<td colspan="3"> ${wpbMessages["General.account.nooperations"]?html} </td> 
+			    </tr>			
+                        </#if>
+                        <#list withdrawals as item >
+			    <tr>
+				<td> ${item.date?datetime?string.short} </td> 
+				<td> ${item.id?string.computer} </td>
+				<td> ${item.amount?string.currency} </td>
+                            </tr>			
+                        </#list>
+                        <#if (hasNextPage==1 || page>1) >
+                            <tr>
+                                <td colspan="3">
+                                    <#if (page>1)> 
+                                        <div class="align-left"> <a href="./statements-withdrawals?page=${page-1}"> &#171 ${wpbMessages["General.previous.page"]?html}  </a> </div>
+                                    </#if>
+                                    <#if (hasNextPage==1)> 
+                                        <div class="align-right"> <a href="./statements-withdrawals?page=${page+1}"> ${wpbMessages["General.next.page"]?html}  &#187 </a> </div>
+                                    </#if>
+
+                                </td>
+                            </tr>
+                        </#if>
+		</table>
+            </div>
+	</div>
+	<div class="clear"></div>
+</div>
+<@wpbModule externalKey="adfd6ce3-948b-4247-9109-c71d3c5bfdb0" name="footer" />
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
+
+<fo:layout-master-set>
+<fo:simple-page-master master-name="A4" page-width="720px" page-height="600px" margin="10px">
+  <fo:region-body margin-top="40px"/>
+  <fo:region-before extent="10px" region-name="aheader" />
+  <fo:region-after extent="10px" region-name="afooter" />
+  </fo:simple-page-master>
+</fo:layout-master-set>
+
+<fo:page-sequence master-reference="A4" initial-page-number="1">
+  <fo:title> Account statement </fo:title>
+  <fo:static-content flow-name="aheader">
+	<fo:block></fo:block>
+  </fo:static-content>
+  
+  <fo:static-content flow-name="afooter">
+	<fo:block></fo:block>
+  </fo:static-content>
+ 
+  
+  <fo:flow flow-name="xsl-region-body">
+	<fo:block font-family="Times New Roman" font-size="2em">
+            <#assign dates=wpbAppModel["dates"]![] keys=wpbAppModel["keys"]![] amountPerDays=wpbAppModel["amountPerDays"]!{} transactionsPerDays=wpbAppModel["transactionsPerDays"]!{} />
+           <#assign maxAmountPerDay=wpbAppModel["maxAmountPerDay"] maxNumTransactions=wpbAppModel["maxNumTransactions"] />
+                 <#assign barWidth=0 interval=wpbAppModel["interval"] maxWidth=1200 maxHeight=800 />
+           
+                 <#switch interval?string>
+                        <#case "1">
+                                 <#assign barWidth=400/>
+                                 <#break>
+                        <#case "7">
+                                 <#assign barWidth=80/>
+                                 <#break>
+                        <#case "30">
+                                 <#assign barWidth=20/>
+                                 <#break>
+                        <#default>
+                                 <#assign barWidth=10/>
+                                 <#break>
+                 </#switch>
+        <#assign spaceWidth=( (maxWidth-barWidth*interval)/(interval+1) )?floor />
+
+	<fo:instream-foreign-object>
+		<svg width="700px" height="550px" viewBox="0 0 1200 1000" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <#list keys as key>
+                <#assign index=key_index />
+                <#assign xRect=(spaceWidth+ (index*(spaceWidth+barWidth))) />    
+                <#if (maxAmountPerDay>0)>
+                    <#assign yRect=(amountPerDays[key]*maxHeight/maxAmountPerDay)?floor />                    
+		<#else>
+                    <#assign yRect=0 /> 
+                </#if>
+                <rect x="${xRect?string.computer}" y="${(100+maxHeight-yRect)?string.computer}" width="${barWidth?string.computer}" height="${yRect?string.computer}" fill="#FAF100"  />
+                <#assign xText=(xRect+(barWidth/2)?floor) />
+                <#if (interval<30 || index%5==0 || index=29)>
+                    <text x="${xText?string.computer}" y="950" text-anchor="middle" font-size="30"> ${(dates[index])?date?string.short} </text>
+                    <text x="${xText?string.computer}" y="${(100+maxHeight-yRect-40)?string.computer}" text-anchor="middle" font-size="20"> ${amountPerDays[key]?string.currency} </text>
+                </#if>
+            </#list>
+        </svg>
+      </fo:instream-foreign-object>
+		
+    	</fo:block>
+  </fo:flow>
+</fo:page-sequence>
+
+</fo:root>

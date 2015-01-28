@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">Payments.limit</entry>
+<entry key="lastModified">1412846482322</entry>
+<entry key="lcid">en</entry>
+<entry key="value">The amount you can transfer is up to {0}</entry>
+<entry key="externalKey">60027c2b-3999-4792-9f02-e0c84b8f767b</entry>
+</properties>

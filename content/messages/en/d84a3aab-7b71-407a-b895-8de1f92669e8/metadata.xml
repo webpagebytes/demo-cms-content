@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">Header.hi</entry>
+<entry key="lastModified">1421185310202</entry>
+<entry key="lcid">en</entry>
+<entry key="value">Hi, {0}</entry>
+<entry key="externalKey">d84a3aab-7b71-407a-b895-8de1f92669e8</entry>
+</properties>

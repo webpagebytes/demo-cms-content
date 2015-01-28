@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">Profile.confirm.wait</entry>
+<entry key="lastModified">1421185122988</entry>
+<entry key="lcid">fr</entry>
+<entry key="value">Se il vous plaît attendre 30 minutes et recommencez l'opération</entry>
+<entry key="externalKey">52029d84-4504-40d0-8750-ea50249e352e</entry>
+</properties>

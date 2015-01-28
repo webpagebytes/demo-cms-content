@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">General.app.warning</entry>
+<entry key="lastModified">1420121880439</entry>
+<entry key="lcid">fr</entry>
+<entry key="value">Cette application est uniquement à des fins de démonstration, il ne gère pas les transactions financières réelles!</entry>
+<entry key="externalKey">1f147c10-715a-441b-ae04-4f30d7c653ee</entry>
+</properties>

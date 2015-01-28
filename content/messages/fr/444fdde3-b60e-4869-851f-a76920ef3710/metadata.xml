@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">Error.amount.toolarge</entry>
+<entry key="lastModified">1412842834651</entry>
+<entry key="lcid">fr</entry>
+<entry key="value">Valeur montant trop grand</entry>
+<entry key="externalKey">444fdde3-b60e-4869-851f-a76920ef3710</entry>
+</properties>

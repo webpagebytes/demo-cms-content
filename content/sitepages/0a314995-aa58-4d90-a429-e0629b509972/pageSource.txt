@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
+<fo:layout-master-set>
+<fo:simple-page-master master-name="A4" page-width="210mm" page-height="297mm" margin="10mm">
+  <fo:region-body margin-top="40mm" margin-bottom="10mm" />
+  <fo:region-before extent="5mm" region-name="aheader" />
+  <fo:region-after extent="6mm" region-name="afooter" />
+  </fo:simple-page-master>
+</fo:layout-master-set>
+<fo:page-sequence master-reference="A4" initial-page-number="1">
+  <fo:title> Daily report </fo:title>
+  <fo:static-content flow-name="aheader">
+	<fo:block border-color="#888888" border-width="none" border-style="solid" >
+		<fo:block-container position="absolute" top="2mm" left="2mm" width="60mm" height="32mm">
+                               <fo:block>
+                                   <fo:external-graphic src="<@wpbImage externalKey="88ec05a7-3634-4a3f-a05a-3dbd8c8a83e8" embedded="true" />" />       
+                               </fo:block>           	                                         
+		</fo:block-container>
+		<fo:block-container position="absolute" top="1mm" left="70mm" width="118mm" height="30mm">
+			<fo:block text-align="right">   
+			    <fo:basic-link  external-destination="url('http://www.webpagebytes.com')" color="blue" text-decoration="underline"> http://www.webpagebytes.com </fo:basic-link>
+			</fo:block>
+			<fo:block text-align="right">   
+			    Sample PDF generation
+			</fo:block>			
+		</fo:block-container>
+	</fo:block>
+  </fo:static-content>
+  <fo:static-content flow-name="afooter">
+	<fo:block background-color="#D0D0D0"> Daily report - Webpagebytes CMS Sample Application </fo:block>
+  </fo:static-content>
+  <fo:flow flow-name="xsl-region-body">
+       <#assign dates=wpbAppModel["dates"]![] keys=wpbAppModel["keys"]![] usersCountPerDays=wpbAppModel["usersCountPerDays"]!{}  countTransactionsPerDay=wpbAppModel["countTransactionsPerDay"]!{} sumTransactionsPerDay=wpbAppModel["sumTransactionsPerDay"]!{}  countDepositsPerDay=wpbAppModel["countDepositsPerDay"]!{} sumDepositsPerDay=wpbAppModel["sumDepositsPerDay"]!{} countWithdrawalsPerDay=wpbAppModel["countWithdrawalsPerDay"]!{} sumWithdrawalsPerDay=wpbAppModel["sumWithdrawalsPerDay"]!{} yesterday=wpbAppModel["yesterday"] />
+       <#assign color1="#FF7F27" color2="#007F27" />
+            <fo:block space-before="10mm" text-align="center" color="#FF0000" font-size="1.5em">
+		Report for ${yesterday?string("YYYY/MM/dd")}
+	    </fo:block>	    
+            <fo:block space-before="10mm" >
+		Number of users created in the last 7 days
+	    </fo:block>
+            <fo:list-block>
+		<fo:list-item>
+				<fo:list-item-label >
+            <fo:table table-layout="fixed" width="100%" border-collapse="collapse" text-align="center">
+		<fo:table-column column-width="30mm"/>
+		<fo:table-column column-width="30mm"/>	
+		<fo:table-header background-color="#A7C942" color="#FFFFFF">
+			  <fo:table-cell>
+				<fo:block font-weight="bold"> Date </fo:block>
+			  </fo:table-cell>
+			  <fo:table-cell>
+				<fo:block font-weight="bold"> Count </fo:block>
+			  </fo:table-cell>
+                </fo:table-header>
+                <fo:table-body text-align="center">
+                           <#list keys as key>
+                               <#assign index=(keys?size-key_index-1) />       
+                               <fo:table-row>
+			           <fo:table-cell border-color="#98bf21" border-width="medium" border-style="solid">
+				       <fo:block> ${dates[index]?string("YYYY/MM/dd")} </fo:block>
+				   </fo:table-cell>
+			           <fo:table-cell border-color="#98bf21" border-width="medium" border-style="solid">
+				       <fo:block color="${color1}"> ${usersCountPerDays[keys[index]]!0} </fo:block>
+				   </fo:table-cell>
+                               </fo:table-row>
+                          </#list>
+               </fo:table-body>
+           </fo:table> 
+                  </fo:list-item-label>
+                  <fo:list-item-body start-indent="85mm">
+                      <fo:block>
+                          <fo:external-graphic content-width="80mm" src="data:image/png;base64,${wpbAppModel["users_img"]}" />       
+                      </fo:block>
+                  </fo:list-item-body>
+		</fo:list-item>
+	</fo:list-block>
+	
+           <fo:block  space-before="10mm" >
+		Transactions summary
+	    </fo:block>
+        <fo:list-block>
+		<fo:list-item>
+				<fo:list-item-label >
+	    <fo:table table-layout="fixed" width="100%"  border-collapse="collapse">
+		<fo:table-column column-width="30mm"/>
+		<fo:table-column column-width="25mm"/>	
+                <fo:table-column column-width="25mm"/>	
+		<fo:table-header background-color="#A7C942" color="#FFFFFF" text-align="center">
+			  <fo:table-cell>
+				<fo:block font-weight="bold"> Date </fo:block>
+			  </fo:table-cell>
+			  <fo:table-cell>
+				<fo:block font-weight="bold"> Count </fo:block>
+			  </fo:table-cell>
+			  <fo:table-cell>
+				<fo:block font-weight="bold"> Volume </fo:block>
+			  </fo:table-cell>
+                </fo:table-header>
+                <fo:table-body text-align="center">
+                           <#list keys as key>
+                               <#assign index=(keys?size-key_index-1) />       
+                               <fo:table-row>
+			           <fo:table-cell border-color="#98bf21" border-width="medium" border-style="solid">
+				       <fo:block> ${dates[index]?string("YYYY/MM/dd")} </fo:block>
+				   </fo:table-cell>
+			           <fo:table-cell border-color="#98bf21" border-width="medium" border-style="solid">
+				       <fo:block color="${color1}"> ${countTransactionsPerDay[keys[index]]!0} </fo:block>
+				   </fo:table-cell>
+			           <fo:table-cell border-color="#98bf21" border-width="medium" border-style="solid">
+				       <fo:block color="${color2}"> ${sumTransactionsPerDay[keys[index]]!0} </fo:block>
+				   </fo:table-cell>
+                               </fo:table-row>
+                          </#list>
+               </fo:table-body>
+           </fo:table>
+               </fo:list-item-label>
+               <fo:list-item-body start-indent="85mm">
+           <fo:block>
+            <fo:external-graphic content-width="80mm" src="data:image/png;base64,${wpbAppModel["transactions_img"]}" />       
+          </fo:block>
+             </fo:list-item-body>
+            </fo:list-item>
+        </fo:list-block>
+
+	    <fo:block  space-before="10mm" >
+		Deposits summary
+	    </fo:block>
+          <fo:list-block>
+		<fo:list-item>
+				<fo:list-item-label>
+	    <fo:table table-layout="fixed" width="100%" border-collapse="collapse">
+		<fo:table-column column-width="30mm"/>
+		<fo:table-column column-width="25mm"/>	
+                <fo:table-column column-width="25mm"/>	
+		<fo:table-header background-color="#A7C942" color="#FFFFFF" text-align="center">
+			  <fo:table-cell>
+				<fo:block font-weight="bold"> Date </fo:block>
+			  </fo:table-cell>
+			  <fo:table-cell>
+				<fo:block font-weight="bold"> Count </fo:block>
+			  </fo:table-cell>
+			  <fo:table-cell>
+				<fo:block font-weight="bold"> Volume </fo:block>
+			  </fo:table-cell>
+                </fo:table-header>
+                <fo:table-body text-align="center">
+                           <#list keys as key>
+                               <#assign index=(keys?size-key_index-1) />       
+                               <fo:table-row>
+			           <fo:table-cell border-color="#98bf21" border-width="medium" border-style="solid">
+				       <fo:block> ${dates[index]?string("YYYY/MM/dd")} </fo:block>
+				   </fo:table-cell>
+			           <fo:table-cell border-color="#98bf21" border-width="medium" border-style="solid">
+				       <fo:block color="${color1}"> ${countDepositsPerDay[keys[index]]!0} </fo:block>
+				   </fo:table-cell>
+			           <fo:table-cell border-color="#98bf21" border-width="medium" border-style="solid">
+				       <fo:block color="${color2}"> ${sumDepositsPerDay[keys[index]]!0} </fo:block>
+				   </fo:table-cell>
+                               </fo:table-row>
+                          </#list>
+               </fo:table-body>
+           </fo:table>
+                 </fo:list-item-label>
+                 <fo:list-item-body start-indent="85mm">
+           <fo:block>
+            <fo:external-graphic content-width="80mm" src="data:image/png;base64,${wpbAppModel["deposits_img"]}" />       
+          </fo:block>
+                </fo:list-item-body>
+		</fo:list-item>
+	</fo:list-block>
+	    <fo:block  space-before="10mm">
+		Withdrawals summary
+	    </fo:block>
+	<fo:list-block>		
+			<fo:list-item>
+				<fo:list-item-label>
+	    <fo:table table-layout="fixed" width="100%"  border-collapse="collapse">
+		<fo:table-column column-width="30mm"/>
+		<fo:table-column column-width="25mm"/>	
+                <fo:table-column column-width="25mm"/>	
+		<fo:table-header background-color="#A7C942" color="#FFFFFF" text-align="center">
+			  <fo:table-cell>
+				<fo:block font-weight="bold"> Date </fo:block>
+			  </fo:table-cell>
+			  <fo:table-cell>
+				<fo:block font-weight="bold"> Count </fo:block>
+			  </fo:table-cell>
+			  <fo:table-cell>
+				<fo:block font-weight="bold"> Volume </fo:block>
+			  </fo:table-cell>
+                </fo:table-header>
+                <fo:table-body text-align="center">
+                           <#list keys as key>
+                               <#assign index=(keys?size-key_index-1) />       
+                               <fo:table-row>
+			           <fo:table-cell border-color="#98bf21" border-width="medium" border-style="solid">
+				       <fo:block> ${dates[index]?string("YYYY/MM/dd")} </fo:block>
+				   </fo:table-cell>
+			           <fo:table-cell border-color="#98bf21" border-width="medium" border-style="solid">
+				       <fo:block color="${color1}"> ${countWithdrawalsPerDay[keys[index]]!0} </fo:block>
+				   </fo:table-cell>
+			           <fo:table-cell border-color="#98bf21" border-width="medium" border-style="solid">
+				       <fo:block color="${color2}"> ${sumWithdrawalsPerDay[keys[index]]!0} </fo:block>
+				   </fo:table-cell>
+                               </fo:table-row>
+                          </#list>
+               </fo:table-body>
+           </fo:table>
+	       </fo:list-item-label>
+	       <fo:list-item-body start-indent="85mm">
+           <fo:block>
+            <fo:external-graphic content-width="80mm" src="data:image/png;base64,${wpbAppModel["withdrawals_img"]}" />       
+          </fo:block>
+                </fo:list-item-body>
+		</fo:list-item>
+	</fo:list-block>
+
+          <fo:block  space-before="10mm" font-size="0.9em" font-family="Times Roman" color="#1F0000">
+                    Sample Webpagebytes CMS application does not handle real transactions, it is used only to exercise the Webpagebytes CMS features.
+          </fo:block>
+
+  </fo:flow>
+</fo:page-sequence>
+
+</fo:root>

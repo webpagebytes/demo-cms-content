@@ -1,0 +1,70 @@
+<html>
+<@wpbModule externalKey="d7101b49-8369-4d64-ac1e-87bd88c54b9c" name="head" />
+ 
+<body>
+<@wpbModule externalKey="c83c01ce-8696-4726-a6c0-c8575e829db7" name="header" />
+<#assign user=wpbAppModel["user"]!{} />
+<div class="accountcontent">
+	<@wpbModule externalKey="1a084d80-8679-4d9d-b49e-ebb5601aee61" name="main-menu" />
+	<div class="menudetails"> 
+            <div class="detailsinner">
+               <@wpbModule externalKey="cbd75bd6-95b8-49c1-85df-269e8a2138fd" name="app-warning" />
+		<div class="htitle">
+				<div class="message">  ${wpbMessages["Menu.profile"]?html} </div>
+		</div>
+                <div class="clear"></div>
+		<div class="formbox">
+			<div class="profilebox">
+			<table class="table">
+				<tr>
+					<td> ${wpbMessages["Form.username"]?html} </td> 
+					<td> <b>${user.userName?html}</b> </td>
+					<td> </td>
+				</tr>
+                                <#assign receiveNewsletter=user.receiveNewsletter!0 />
+                                <#if (receiveNewsletter == 1) >
+                                    <#assign receiveNewsletterStr=wpbMessages["General.yes"]?html />
+                                <#else>
+                                    <#assign receiveNewsletterStr=wpbMessages["General.no"]?html />                             
+                                </#if>
+                                <tr>
+					<td> ${wpbMessages["Form.receiveNewsletter"]?html} </td> 
+					<td> <b> ${receiveNewsletterStr} </b></td>
+					<td> </td>
+				</tr>			
+                                <tr>
+					<td> ${wpbMessages["Form.email"]?html} </td> 
+					<td> <b> ${user.email?html} </b></td>
+					<td> <a href="./changeProfile"> ${wpbMessages["Form.change.profile"]?html} </a> </td>
+				</tr>
+                                <tr>
+					<td>  </td> 
+					<td> 
+                                        <#if (user.confirmEmailFlag == 1)>
+                                             <span class="success"> <i class="fa fa-check"> </i> ${wpbMessages["Profile.email.confirmed"]?html} </span>
+                                       <#else>
+                                             <span class="failure"><i class="fa fa-exclamation-triangle"></i> ${wpbMessages["Profile.email.notconfirmed"]?html} </span>
+                                        </#if>
+                                        </td>
+					<td>   
+                                       <#if (user.confirmEmailFlag != 1)>
+                                         <a href="./sendEmailConfirmation"> ${wpbMessages["Profile.email.confirm"]?html} </a>    
+                                        </#if>
+                                       </td>
+				</tr>
+				<tr>
+					<td> ${wpbMessages["Form.password"]?html} </td>
+					<td> <b>********</b> </td>
+					<td> <a href="./changePassword"> ${wpbMessages["Form.change.password"]?html} </a> </td>
+				</tr>
+			</table>
+			</div>
+		</div>
+             </div>
+	</div>
+	<div class="clear"></div>
+</div>
+<@wpbModule externalKey="adfd6ce3-948b-4247-9109-c71d3c5bfdb0" name="footer" />
+
+</body>
+</html>

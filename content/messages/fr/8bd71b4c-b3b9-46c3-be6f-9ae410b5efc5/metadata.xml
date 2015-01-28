@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">Email.statement.date</entry>
+<entry key="lastModified">1421049430091</entry>
+<entry key="lcid">fr</entry>
+<entry key="value">Date du relevé de compte: {0}</entry>
+<entry key="externalKey">8bd71b4c-b3b9-46c3-be6f-9ae410b5efc5</entry>
+</properties>

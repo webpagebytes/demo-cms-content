@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">Reports.transactions.count</entry>
+<entry key="lastModified">1412800261807</entry>
+<entry key="lcid">en</entry>
+<entry key="value">Incoming and outgoing transactions count</entry>
+<entry key="externalKey">93bb4346-91c4-479c-a4e1-d55d4be7a1fe</entry>
+</properties>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">Error.destination.doesnotexist</entry>
+<entry key="lastModified">1408566086190</entry>
+<entry key="lcid">en</entry>
+<entry key="value">User name does not exist</entry>
+<entry key="externalKey">6c95f26b-d8ef-4878-82dc-0f5bc59d05c7</entry>
+</properties>

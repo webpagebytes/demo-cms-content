@@ -1,0 +1,61 @@
+<#assign colorDeposits="#3355AA" colorWithdrawals="#FF5533" />        
+<#assign dates=wpbAppModel["dates"]![] keys=wpbAppModel["keys"]![] amountDepositsPerDays=wpbAppModel["amountDepositsPerDays"]!{} amountWithdrawalsPerDays=wpbAppModel["amountWithdrawalsPerDays"]!{} numDepositsPerDays=wpbAppModel["numDepositsPerDays"]!{} numWithdrawalsPerDays=wpbAppModel["numWithdrawalsPerDays"]!{}  />
+           <#assign maxAmountPerDay=wpbAppModel["maxAmountPerDay"] maxNumOperations=wpbAppModel["maxNumOperations"] />
+                 <#assign barWidth=0 interval=wpbAppModel["interval"] maxWidth=1000 maxHeight=750 />
+           
+                 <#switch interval?string>
+                        <#case "1">
+                                 <#assign barWidth=(maxWidth/2)?floor />
+                                 <#break>
+                        <#case "7">
+                                 <#assign barWidth=(maxWidth/14)?floor />
+                                 <#break>
+                        <#case "30">
+                                 <#assign barWidth=(maxWidth/60)?floor />
+                                 <#break>
+                        <#default>
+                                 <#assign barWidth=(maxWidth/14)?floor />
+                                 <#break>
+                 </#switch>
+       
+<svg width="500px" height="300px" viewBox="0 0 1200 1000" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,903 L1190,903" stroke="#333333" stroke-width="2" />
+        <#list keys as key>
+		<#assign index=key_index />           
+		<#assign xPos=(index*2*barWidth) />    
+		<#if (maxAmountPerDay>0)>
+			<#assign yDepositsPos=(amountDepositsPerDays[key]*maxHeight/maxAmountPerDay)?floor />      
+			<#assign yWithdrawalsPos=(amountWithdrawalsPerDays[key]*maxHeight/maxAmountPerDay)?floor />                    
+		<#else>
+			<#assign yDepositsPos=0  yWithdrawalsPos=0 /> 
+		</#if>
+               
+
+		<rect x="${xPos?string.computer}" y="${(150+maxHeight-yDepositsPos)?string.computer}" width="${barWidth?string.computer}" height="${yDepositsPos?string.computer}" fill="${colorDeposits}"  />
+		<rect x="${(xPos+barWidth)?string.computer}" y="${(150+maxHeight-yWithdrawalsPos)?string.computer}" width="${barWidth?string.computer}" height="${yWithdrawalsPos?string.computer}" fill="${colorWithdrawals}"  />
+
+	        <#if (interval <=7 || (index%5 == 0) || (index==29))>
+                   <text x="${(xPos +barWidth/2)?floor?string.computer}" y="${940}" text-anchor="middle" font-size="40"> ${(dates[index])?date?string("dd")} </text> 
+                </#if>
+	</#list>
+
+       <#if (maxAmountPerDay==0)>
+             <#assign linesCount=1 />      
+         <#elseif (maxAmountPerDay<5)>
+            <#assign linesCount=maxAmountPerDay/>
+         <#else>
+            <#assign linesCount=5 />
+         </#if>
+ 
+         <#list 1..linesCount as lineIndex>
+             <#assign lineValue= (maxAmountPerDay/linesCount)?ceiling yLine=(900-(maxHeight/linesCount)*lineIndex) />
+              <path d="M0,${yLine?string.computer} L1190,${yLine?string.computer}" stroke="#333333" stroke-width="0.5" />
+              <text x="1190" y="${(yLine-20)?string.computer}" text-anchor="end" font-size="30"> ${(lineValue*lineIndex)?string.currency} </text>
+         </#list>
+         <#if (maxAmountPerDay == 0) >
+              <text x="500" y="450" text-anchor="middle" font-size="50" opacity="0.4"> ${wpbMessages["General.account.nooperations"]?xml} </text>
+         </#if>
+         <rect x="50" y="50" width="50" height="50"  fill="${colorDeposits}" /> <text font-size="40" x="120" y="85" > ${wpbMessages["Reports.deposits.amount"]?xml} </text>
+         <rect x="600" y="50" width="50" height="50"  fill="${colorWithdrawals}" /> <text font-size="40" x="670" y="85" > ${wpbMessages["Reports.withdrawals.amount"]?xml} </text>
+
+</svg>

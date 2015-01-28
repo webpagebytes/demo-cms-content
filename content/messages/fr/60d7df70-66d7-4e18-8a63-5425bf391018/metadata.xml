@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">General.regards</entry>
+<entry key="lastModified">1421872085280</entry>
+<entry key="lcid">fr</entry>
+<entry key="value">Cordialement, {0} l'équipe Webpagebytes.</entry>
+<entry key="externalKey">60d7df70-66d7-4e18-8a63-5425bf391018</entry>
+</properties>

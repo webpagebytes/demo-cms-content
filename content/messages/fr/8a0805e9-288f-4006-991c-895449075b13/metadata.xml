@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">General.withdraw.X</entry>
+<entry key="lastModified">1412591383338</entry>
+<entry key="lcid">fr</entry>
+<entry key="value">Retirer {0}</entry>
+<entry key="externalKey">8a0805e9-288f-4006-991c-895449075b13</entry>
+</properties>

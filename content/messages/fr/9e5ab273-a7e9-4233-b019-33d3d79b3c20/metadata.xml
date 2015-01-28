@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">Profile.email.already</entry>
+<entry key="lastModified">1421185147161</entry>
+<entry key="lcid">fr</entry>
+<entry key="value">Votre e-mail est déjà confirmée</entry>
+<entry key="externalKey">9e5ab273-a7e9-4233-b019-33d3d79b3c20</entry>
+</properties>

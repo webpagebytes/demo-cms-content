@@ -1,0 +1,27 @@
+<p>
+	 Webpagebytes CMS uses server side plugins (named Controllers in MVC pattern) to provide the data displayed in the generated content and to add custom server side functionality to various requests. 
+</p>
+<p>
+	 <br />
+</p>
+<p>
+	 On this page, the account statement is generated for the web page, for an email and in a pdf file. All three versions display the same data and share the same controller that provides the account statement data. 
+</p>
+<p>
+	 <br />
+</p>
+<p>
+	 A controller can also fetch content from CMS to generate another content. The email is sent from a controller that fetches the email body and the subject from the  CMS engine. The pdf file is generated from a controller that fetches XSL-FO content from the CMS engine and then converts it to PDF using Apache FOP. 
+</p>
+<p>
+	 <br />
+</p>
+<p>
+	 The principle is to write a controller once and then reuse it to generate various contents, web pages, images, emails, pdf files and so on. 
+</p>
+<p>
+	   
+</p>
+<p>
+	 <br />
+</p>

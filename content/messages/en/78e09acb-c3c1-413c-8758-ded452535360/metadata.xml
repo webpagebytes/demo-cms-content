@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">Error.destination.empty</entry>
+<entry key="lastModified">1408566096431</entry>
+<entry key="lcid">en</entry>
+<entry key="value">Recipient user name cannot be empty</entry>
+<entry key="externalKey">78e09acb-c3c1-413c-8758-ded452535360</entry>
+</properties>

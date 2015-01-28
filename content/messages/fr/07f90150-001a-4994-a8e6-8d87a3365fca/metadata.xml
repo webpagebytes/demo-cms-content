@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">Deposits.deposit</entry>
+<entry key="lastModified">1412852935075</entry>
+<entry key="lcid">fr</entry>
+<entry key="value">Vous avez déposé {0} dans votre compte</entry>
+<entry key="externalKey">07f90150-001a-4994-a8e6-8d87a3365fca</entry>
+</properties>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">Error.email.length</entry>
+<entry key="lastModified">1420278013049</entry>
+<entry key="lcid">fr</entry>
+<entry key="value">Email valeur ne peut pas être vide</entry>
+<entry key="externalKey">b3fbaeec-d080-4dff-9747-c2a83c031f82</entry>
+</properties>

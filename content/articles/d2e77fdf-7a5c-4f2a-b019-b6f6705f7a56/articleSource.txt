@@ -1,0 +1,9 @@
+<p>
+	 Perform some Deposits, Transactions and Withdrawals to see dynamic data below. 
+</p>
+<p>
+	 <br />
+</p>
+<p>
+	 Webpagebytes CMS uses MVC pattern, the server side plugins (Controllers) populate the Model with dynamic data and the Views (represented by the 'Site Pages' in Webpagebytes CMS) displays the dynamic data. 
+</p>

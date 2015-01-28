@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">Error.email.format</entry>
+<entry key="lastModified">1412842954514</entry>
+<entry key="lcid">fr</entry>
+<entry key="value">Format e-mail invalide</entry>
+<entry key="externalKey">80d3d367-79cf-41a5-9641-7a2d83b0d6e4</entry>
+</properties>

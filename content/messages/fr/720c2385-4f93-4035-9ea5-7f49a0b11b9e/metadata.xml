@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">Error.amount.empty</entry>
+<entry key="lastModified">1412842786596</entry>
+<entry key="lcid">fr</entry>
+<entry key="value">Le montant ne peut pas être vide</entry>
+<entry key="externalKey">720c2385-4f93-4035-9ea5-7f49a0b11b9e</entry>
+</properties>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">Email.verification.success</entry>
+<entry key="lastModified">1421953778004</entry>
+<entry key="lcid">fr</entry>
+<entry key="value">L'adresse de courriel {0} est maintenant confirmé! Aller au {1} page de connexion {2}</entry>
+<entry key="externalKey">4fea7a85-2dd9-45df-86c6-2aa89ac985e2</entry>
+</properties>

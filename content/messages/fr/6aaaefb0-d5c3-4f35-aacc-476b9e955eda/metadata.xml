@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">Login.form.signup.message</entry>
+<entry key="lastModified">1404028702446</entry>
+<entry key="lcid">fr</entry>
+<entry key="value">Vous n'avez pas de compte?</entry>
+<entry key="externalKey">6aaaefb0-d5c3-4f35-aacc-476b9e955eda</entry>
+</properties>

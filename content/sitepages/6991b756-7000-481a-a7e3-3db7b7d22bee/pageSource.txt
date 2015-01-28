@@ -1,0 +1,21 @@
+<html>
+<@wpbModule externalKey="d7101b49-8369-4d64-ac1e-87bd88c54b9c" name="head" />
+ 
+<body>
+<@wpbModule externalKey="c83c01ce-8696-4726-a6c0-c8575e829db7" name="header" />
+<#assign result=wpbAppModel["result"]!"1" user=wpbAppModel["user"]!{} />
+<@wpbModule externalKey="cbd75bd6-95b8-49c1-85df-269e8a2138fd" name="app-warning" />
+<#if (result=="0")>
+      <div class="emailVerification success">
+      ${wpbFormatText(wpbMessages["Email.verification.success"]?html, user.email?html, "<a href='./login'>", "</a>")}
+      </div>
+<#else>
+     <div class="emailVerification failure">
+     ${wpbFormatText(wpbMessages["Email.verification.invalid"]?html, "<a href='./register'>", "</a>")}
+     </div>
+</#if>
+
+<@wpbModule externalKey="adfd6ce3-948b-4247-9109-c71d3c5bfdb0" name="footer" />
+
+</body>
+</html>

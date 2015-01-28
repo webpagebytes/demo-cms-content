@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="enabled">1</entry>
+<entry key="resourceExternalKey"></entry>
+<entry key="lastModified">1405088259262</entry>
+<entry key="resourceType">3</entry>
+<entry key="uri">/withdraw</entry>
+<entry key="httpOperation">POST</entry>
+<entry key="externalKey">659c6b29-8885-449f-b2aa-1b4c9ee3b4be</entry>
+<entry key="controllerClass">com.webpagebytes.wpbsample.controllers.PerformWithdrawalController</entry>
+</properties>

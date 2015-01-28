@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">notifications-image-2-dimentions</entry>
+<entry key="lastModified">1415224569340</entry>
+<entry key="isTemplateSource">1</entry>
+<entry key="externalKey">7a119b26-3f3c-49db-8653-a2e8010364db</entry>
+<entry key="pageModelProvider">com.webpagebytes.wpbsample.controllers.NotificationLastDayPageController</entry>
+<entry key="contentType">text/xml</entry>
+</properties>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="enabled">1</entry>
+<entry key="resourceExternalKey">be2b4453-878b-463d-8636-40821fac6563</entry>
+<entry key="lastModified">1412847986128</entry>
+<entry key="resourceType">3</entry>
+<entry key="uri">/{language}/changePassword</entry>
+<entry key="httpOperation">GET</entry>
+<entry key="externalKey">fabf6642-dc04-4005-9582-279a5e56cff5</entry>
+<entry key="controllerClass">com.webpagebytes.wpbsample.controllers.GetProfileController</entry>
+</properties>

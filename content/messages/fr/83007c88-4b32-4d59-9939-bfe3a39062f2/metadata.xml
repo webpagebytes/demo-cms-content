@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">Error.username.format</entry>
+<entry key="lastModified">1412843096745</entry>
+<entry key="lcid">fr</entry>
+<entry key="value">Nom d'utilisateur contient des caractères invalide</entry>
+<entry key="externalKey">83007c88-4b32-4d59-9939-bfe3a39062f2</entry>
+</properties>

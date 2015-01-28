@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
+
+<fo:layout-master-set>
+<fo:simple-page-master master-name="A4" page-width="720px" page-height="600px" margin="10px">
+  <fo:region-body margin-top="40px"/>
+  <fo:region-before extent="10px" region-name="aheader" />
+  <fo:region-after extent="10px" region-name="afooter" />
+  </fo:simple-page-master>
+</fo:layout-master-set>
+
+<fo:page-sequence master-reference="A4" initial-page-number="1">
+  <fo:title> Account statement </fo:title>
+  <fo:static-content flow-name="aheader">
+	<fo:block></fo:block>
+  </fo:static-content>
+  
+  <fo:static-content flow-name="afooter">
+	<fo:block></fo:block>
+  </fo:static-content>
+ 
+  
+  <fo:flow flow-name="xsl-region-body">
+	<fo:block font-family="Times New Roman">
+                         <#assign sumTransactions=wpbAppModel["sumTransactions"]!0 sumDeposits=wpbAppModel["sumDeposits"]!0 sumWithdrawals=wpbAppModel["sumWithdrawals"]!0 maxValue=wpbAppModel["maxValue"]!0 />
+                         <#assign yTransactions=0 yDeposits=0 yWithdrawals=0 />
+                         <#if (maxValue>0)>
+                                 <#assign yTransactions=(750*sumTransactions/maxValue)?floor />
+                                 <#assign yDeposits=(750*sumDeposits/maxValue)?floor />
+                                 <#assign yWithdrawals=(750*sumWithdrawals/maxValue)?floor />
+                         </#if>
+
+	  
+			<fo:instream-foreign-object>
+			 <svg width="700px" height="550px" viewBox="0 0 1200 1000" version="1.1" xmlns="http://www.w3.org/2000/svg">
+			    <rect x="200" y="${850-yTransactions}" width="200" height="${yTransactions}" fill="#00F100" />
+			    <rect x="500" y="${850-yDeposits}" width="200" height="${yDeposits}" fill="#FAF100" />
+			    <rect x="800" y="${850-yWithdrawals}" width="200" height="${yWithdrawals}" fill="#00F1FA" />
+                            <text x="300" y="${800-yTransactions}" text-anchor="middle" font-size="40pt"> ${sumTransactions?string.currency}</text>
+                            <text x="600" y="${800-yDeposits}" text-anchor="middle" font-size="40pt"> ${sumDeposits?string.currency}</text>
+                            <text x="900" y="${800-yWithdrawals}" text-anchor="middle" font-size="40pt"> ${sumWithdrawals?string.currency}</text>
+			    <path d="M100 850 L1100 850" stroke="#000000" strike-width="4" />
+                            <text x="300" y="900" text-anchor="middle" font-size="40pt"> ${wpbMessages("Menu.payments")?xml} </text>
+                            <text x="600" y="900" text-anchor="middle" font-size="40pt"> ${wpbMessages("Menu.deposits")?xml} </text>
+                            <text x="900" y="900" text-anchor="middle" font-size="40pt"> ${wpbMessages("Menu.withdrawals")?xml} </text>
+                            <#if (maxValue == 0) >
+                                  <text x="600" y="400" text-anchor="middle" font-size="60pt" opacity="0.4"> ${wpbMessages["General.account.nooperations"]?xml} </text>
+                            </#if>
+                         </svg>
+			</fo:instream-foreign-object>
+		</fo:block>
+      </fo:flow>
+</fo:page-sequence>
+
+</fo:root>

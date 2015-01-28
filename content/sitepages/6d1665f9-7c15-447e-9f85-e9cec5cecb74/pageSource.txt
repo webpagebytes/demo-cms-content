@@ -1,0 +1,75 @@
+<html>
+<@wpbModule externalKey="d7101b49-8369-4d64-ac1e-87bd88c54b9c" name="head" />
+ 
+<body>
+<@wpbModule externalKey="c83c01ce-8696-4726-a6c0-c8575e829db7" name="header" />
+
+<#assign loginUserName=wpbAppModel["loginUserName"]!"" /> 
+
+<div class="accountcontent">
+	<@wpbModule externalKey="1a084d80-8679-4d9d-b49e-ebb5601aee61" name="main-menu" />
+	<div class="menudetails">
+		<div class="detailsinner">
+                        <@wpbModule externalKey="cbd75bd6-95b8-49c1-85df-269e8a2138fd" name="app-warning" />
+			<div class="htitle">
+				<div class="message"> ${wpbMessages["Home.welcome"]?html} ${loginUserName?html} 
+                                </div>
+			</div>
+			<div class="balance">
+                        <#assign account=wpbAppModel["account"]!"" />
+			${wpbMessages["Home.account.balance"]?html} <span> ${account.balance?string.currency} </span>
+			</div>
+			<div class="clear"> </div>
+			<div class="details">
+				<div class="text-important">
+					${wpbMessages["Home.account.activity"]?html}
+                                          <span class="why"> ${wpbMessages["General.whats.this"]?html} 
+                                              <span class="why-details">
+                                                 <div class="text">
+                                                    <@wpbArticle externalKey="d2e77fdf-7a5c-4f2a-b019-b6f6705f7a56" title="what's this - controllers" />
+                                                 </div>
+                                              </span>
+                                          </span>
+				</div>
+                                <#assign acountOperations=wpbAppModel["accountOperations"] />
+                 
+				<table class="table table-grey">
+					<thead>
+						<tr>
+							<th> ${wpbMessages["General.time"]?html} </td>
+							<th> ${wpbMessages["General.transaction.identifier"]?html} </th>
+							<th> ${wpbMessages["General.description"]?html} </th>
+						</tr>
+					</thead>
+                                        <#if (acountOperations?size == 0)>
+		           	            <tr>
+				                 <td colspan="3"> ${wpbMessages["General.account.nooperations"]?html} </td> 
+			                    </tr>			
+                                        </#if>
+					<#list acountOperations as item >
+			                    <tr>
+				                <td> ${item.date?datetime?string.short} </td> 
+				                <td> ${item.id?string.computer} </td>
+				                <td> 
+                                                      <#if item.type==1>
+                                                          ${wpbFormatText( wpbMessages["General.deposit.X"]?html, item.amount?string.currency) }
+                                                      </#if> 
+                                                      <#if item.type==2>
+                                                           ${wpbFormatText( wpbMessages["General.withdraw.X"]?html, item.amount?string.currency) }
+                                                      </#if> 
+                                                      <#if item.type==3>
+                                                          ${wpbFormatText( wpbMessages["General.transfer.X.Y"]?html, item.amount?string.currency, item.sourceUserName?html, item.destinationUserName?html) }                                                          
+                                                      </#if> 
+                                                </td>  
+                                          </tr>			
+                                     </#list> 	
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="clear"></div>
+</div>
+<@wpbModule externalKey="adfd6ce3-948b-4247-9109-c71d3c5bfdb0" name="footer" />
+
+</body>
+</html>

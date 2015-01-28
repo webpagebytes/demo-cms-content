@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">Error.destination.empty</entry>
+<entry key="lastModified">1412842890426</entry>
+<entry key="lcid">fr</entry>
+<entry key="value">Nom d'utilisateur bénéficiaire ne peut pas être vide</entry>
+<entry key="externalKey">1a49682c-4d03-4b90-9e6c-4b7a908fa5b5</entry>
+</properties>

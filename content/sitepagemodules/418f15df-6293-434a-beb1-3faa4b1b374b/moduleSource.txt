@@ -1,0 +1,94 @@
+h1, h2
+{
+padding-top: 20px;
+font-size: 18px;
+font-weight: bold;
+border-bottom: 1px solid #000000;
+}
+h2
+{
+font-size: 16px;
+}
+table 
+{
+border-collapse: collapse;
+text-align:center;
+}
+table, table th, table td 
+{
+border: 1px solid #98bf21;
+}
+table th
+{
+background-color: #A7C942;
+color: #FFFFFF;
+}
+table td, table th
+{
+padding: 3px 15px;
+}
+.image
+{
+float:left;
+width: 100px;
+}
+.contact
+{
+float:right;
+width: 300px;
+}
+.clear
+{
+clear:both;
+}
+.warn
+{
+margin: 10px auto;
+padding: 10px 10px;
+border: 1px solid #9DA800;
+text-align:center;
+background-color: #F6FABE;
+color: #037E13;
+font-size: 14px;
+max-width: 650px;
+white-space: normal;
+}
+.balance
+{
+float:right;
+border: 1px solid #D2D5D8;
+padding: 20px;
+background-color: #FFF1A5;
+text-align: center;
+}
+.balance span
+{
+font-size: 2em;
+}
+.user-details
+{
+float:left;
+}
+.user-details .name
+{
+font-size: 1.4em;
+}
+p
+{
+margin: 15px 0px;
+}
+
+.footer
+{
+margin-top: 30px;
+border-top: 1px solid #F0F0F0;
+text-align:center;
+color: A0A0A0;
+font-size: 0.8em;
+padding-top:10px;
+}
+a
+{
+text-decoration: none;
+color: #2525CA;
+}

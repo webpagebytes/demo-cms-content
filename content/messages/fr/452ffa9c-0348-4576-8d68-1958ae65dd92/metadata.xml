@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">Error.username.notfound</entry>
+<entry key="lastModified">1412843143597</entry>
+<entry key="lcid">fr</entry>
+<entry key="value">Nom d'utilisateur ou mot de passe incorrect</entry>
+<entry key="externalKey">452ffa9c-0348-4576-8d68-1958ae65dd92</entry>
+</properties>

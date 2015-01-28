@@ -1,0 +1,66 @@
+<html>
+<@wpbModule externalKey="d7101b49-8369-4d64-ac1e-87bd88c54b9c" name="head" />
+ 
+<body>
+<@wpbModule externalKey="c83c01ce-8696-4726-a6c0-c8575e829db7" name="header" />
+<#assign errors=wpbAppModel["errors"]!{} /> 
+<#assign values=wpbAppModel["values"]!{} />
+<#assign loginUserName=wpbAppModel["loginUserName"]!"" /> 
+
+<div class="accountcontent">
+	<@wpbModule externalKey="1a084d80-8679-4d9d-b49e-ebb5601aee61" name="main-menu" />
+	<div class="menudetails">
+             <div class="detailsinner">
+                <@wpbModule externalKey="cbd75bd6-95b8-49c1-85df-269e8a2138fd" name="app-warning" />
+		<div class="htitle">
+				<div class="message">  ${wpbMessages["Profile.edit.profile"]?html} </div>
+		</div>
+                <div class="clear"></div>
+		<div class="formbox">
+                    <form method="post" action="./changeProfile" >
+			<div class="formline"> 
+                            <span class="label label-2x text"> ${wpbMessages["Form.username"]?html} </span> 
+                            <b>${loginUserName?html}</b> 
+                        </div>
+                        <#assign receiveNewsletterChecked="" />
+                        <#if (values["receiveNewsletter"]?? && values["receiveNewsletter"]=="1") >                      
+                             <#assign receiveNewsletterChecked="checked" />
+                        </#if>
+	                <div class="formline"> 
+                            <span class="label label-2x text"> ${wpbMessages["Form.receiveNewsletter"]?html} </span> 
+                            <input class="" type="checkbox" name="receiveNewsletter" value="1"  ${receiveNewsletterChecked}> 
+                            <#if errors["receiveNewsletter"]??>
+                                  <span class="text error"> ${wpbMessages[errors["receiveNewsletter"]]}</span>
+                            </#if>                          
+                        </div>
+			<div class="formline"> 
+                            <span class="label label-2x text"> ${wpbMessages["Form.email"]?html} </span> 
+                            <input class="inputtext" type="text" name="email" value="${values["email"]!""}" > 
+                            <#if errors["email"]??>
+                                  <span class="text error"> ${wpbMessages[errors["email"]]}</span>
+                            </#if>                          
+                        </div>
+
+			<div class="formline"> 
+                            <span class="label label-2x text">  ${wpbMessages["General.account.password"]?html} </span> 
+                            <input class="inputtext" type="password" name="password" > 
+                            <#if errors["password"]??>
+                                  <span class="text error"> ${wpbMessages[errors["password"]]?html}</span>
+                            </#if>                          
+                        </div>
+			<div class="formline"> 
+                            <span class="label label-2x text"></span> <input class="button but-green" type="submit" value="${wpbMessages["Form.change.profile"]?html}">
+                        </div>
+                    </form>
+		</div>
+                <div class="info-message">
+                    Edit your account password <a href="./changePassword">here</a>. 
+		</div>	
+            </div>
+	</div>
+	<div class="clear"></div>
+</div>
+<@wpbModule externalKey="adfd6ce3-948b-4247-9109-c71d3c5bfdb0" name="footer" />
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="enabled">1</entry>
+<entry key="resourceExternalKey"></entry>
+<entry key="lastModified">1405172175562</entry>
+<entry key="resourceType">3</entry>
+<entry key="uri">/payment</entry>
+<entry key="httpOperation">POST</entry>
+<entry key="externalKey">c94d9748-8f92-486b-aa68-9a1841f7447f</entry>
+<entry key="controllerClass">com.webpagebytes.wpbsample.controllers.PerformTransactionController</entry>
+</properties>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">Error.destination.thesame</entry>
+<entry key="lastModified">1405181364810</entry>
+<entry key="lcid">en</entry>
+<entry key="value">Recipient cannot be the same as current user</entry>
+<entry key="externalKey">cc5cd8fb-616b-4ca3-89b5-aa2bdf573e10</entry>
+</properties>

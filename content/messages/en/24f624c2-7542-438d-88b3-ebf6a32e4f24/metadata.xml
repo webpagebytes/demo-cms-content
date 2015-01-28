@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">Profile.confirm.success</entry>
+<entry key="lastModified">1421184884745</entry>
+<entry key="lcid">en</entry>
+<entry key="value">Confirmation email was sent with success</entry>
+<entry key="externalKey">24f624c2-7542-438d-88b3-ebf6a32e4f24</entry>
+</properties>

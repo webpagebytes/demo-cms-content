@@ -1,0 +1,16 @@
+<p>
+	The demo application shows the main features of Webpagebytes CMS.
+</p>
+<p>
+	<br />
+</p>
+<p>
+	See how dynamic content can be managed by a CMS application and included into web pages, emails, images, pdf files, SVG documents.
+</p>
+<p>
+	<br />
+</p>
+<p>
+	Sign up/login and you will be guided with tooltips across the features. 
+</p>
+ 

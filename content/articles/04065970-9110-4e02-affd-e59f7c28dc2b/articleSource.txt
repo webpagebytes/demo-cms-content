@@ -1,0 +1,9 @@
+<p>
+	 With Webpagebytes CMS the static content can be generated and edited in a WYSIWYG html editor, under the <strong>Articles</strong> section.
+</p>
+<p>
+	 <br />
+</p>
+<p>
+	In the Demo application each explanation tooltip, the License and Privacy Policy are stored as a site article.  
+</p>

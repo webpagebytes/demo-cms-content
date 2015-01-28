@@ -1,0 +1,3 @@
+<p>
+	 To receive emails, you need to confirm your email address.
+</p>

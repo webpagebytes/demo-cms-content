@@ -1,0 +1,39 @@
+<p>
+	The report filter is implemented based on dynamic urls:
+</p>
+<p>
+	/report-deposits-withdrawals-1<br />
+</p>
+<p>
+	/report-deposits-withdrawals-7<br />
+</p>
+<p>
+	/report-deposits-withdrawals-30<br />
+</p>
+<p>
+	The French page is using dynamic urls too:
+</p>
+<p>
+	/fr/report-deposits-withdrawals-1<br />
+</p>
+<p>
+	<br />
+</p>
+<p>
+	Webpagebytes CMS supports dynamic urls by specifying parameters in the url:
+</p>
+<p>
+	/report-deposits-withdrawals-{interval}<br />
+</p>
+<p>
+	/{language}/report-deposits-withdrawals-{interval}<br />
+</p>
+<div>
+	<br />
+</div>
+<p>
+	 
+</p>
+<p>
+	 
+</p>

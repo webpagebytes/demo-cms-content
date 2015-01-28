@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">Error.username.length</entry>
+<entry key="lastModified">1419954563389</entry>
+<entry key="lcid">fr</entry>
+<entry key="value">Nom d'utilisateur ne peut être vide</entry>
+<entry key="externalKey">b1e4cc12-b34e-46f8-bdff-9aa273c9ba5d</entry>
+</properties>

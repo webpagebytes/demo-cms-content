@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
+<fo:layout-master-set>
+<fo:simple-page-master master-name="A4" page-width="300px" page-height="200px">
+  <fo:region-body />
+</fo:simple-page-master>
+</fo:layout-master-set>
+<fo:page-sequence master-reference="A4" initial-page-number="1">
+<fo:flow flow-name="xsl-region-body">
+       <#assign color="#FF7F27" />
+       <#assign dates=wpbAppModel["dates"]![] keys=wpbAppModel["keys"]![]  maxHeight=850 linesCount=5 maxData=0  />     
+       <#assign data=wpbAppModel["usersCountPerDays"]!{}   />
+ 
+       <fo:block  >
+ 		<fo:instream-foreign-object>
+<#list keys as key>
+      <#if ((maxData<data[key]!0) && data[key]??)>
+         <#assign maxData=data[key] />
+      </#if>
+</#list>
+<svg width="290px" height="190px" viewBox="0 0 1200 1000" version="1.1" xmlns="http://www.w3.org/2000/svg">
+	<#list keys as key>
+		<#assign index=key_index barWidth=157 />
+		<#assign xRect=(index*barWidth) />    
+		<#if (maxData>0 && data[key]??)>
+			<#assign yRect=(data[key]*maxHeight/maxData)?floor />      
+		<#else>
+			<#assign yRect=0 />           
+		</#if>
+
+		<rect x="${xRect?string.computer}" y="${(50+maxHeight-yRect)?string.computer}" width="${(barWidth-10)?string.computer}" height="${yRect?string.computer}" fill="${color}"  />
+                <text x="${(xRect+barWidth/2)?floor?string.computer}" y="${950}" text-anchor="middle" font-size="50"> ${(dates[index])?date?string("dd")} </text> 
+        </#list>
+        <path d="M10,903 L1190,903" stroke="#333333" stroke-width="2" />
+        <#assign lineValue=maxData />
+        <#if (lineValue==0)>
+             <#assign lineValue=1 />
+        </#if>
+        <#list 1..linesCount as lineIndex>
+              <#assign yLine=(50+maxHeight-(maxHeight/linesCount)*lineIndex) />
+              <path d="M10,${yLine?string.computer} L1190,${yLine?string.computer}" stroke="#333333" stroke-width="0.5" />
+         </#list>
+         <text x="1190" y="40" text-anchor="end" font-size="50" fill="${color}"> ${lineValue} </text>
+  </svg>
+     
+		</fo:instream-foreign-object>
+       </fo:block> 
+</fo:flow>
+</fo:page-sequence>
+</fo:root>

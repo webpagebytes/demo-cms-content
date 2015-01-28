@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="ownerExternalKey">32ed9201-ae32-4b78-8df2-cca1492a146b</entry>
+<entry key="localeType">0</entry>
+<entry key="name">successUri</entry>
+<entry key="lastModified">1405171774006</entry>
+<entry key="value">./payment-result</entry>
+<entry key="overwriteFromUrl">0</entry>
+<entry key="externalKey">9e3e4296-e69b-4b33-8e75-91b543f3907f</entry>
+</properties>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">Payments.recipient</entry>
+<entry key="lastModified">1412846897203</entry>
+<entry key="lcid">fr</entry>
+<entry key="value">Nom d'utilisateur destinataire</entry>
+<entry key="externalKey">0bdd2d16-1e37-4418-832b-17e890e77bf1</entry>
+</properties>

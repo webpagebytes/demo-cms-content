@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">Error.permission</entry>
+<entry key="lastModified">1412852134396</entry>
+<entry key="lcid">fr</entry>
+<entry key="value">Vous n'avez pas la permission de voir cette page</entry>
+<entry key="externalKey">11826ae9-055d-475e-8cf2-eb0925f4805a</entry>
+</properties>

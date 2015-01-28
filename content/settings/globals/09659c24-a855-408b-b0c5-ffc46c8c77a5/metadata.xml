@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="ownerExternalKey"></entry>
+<entry key="localeType">0</entry>
+<entry key="name">REGISTRATION_URI</entry>
+<entry key="lastModified">1404336338987</entry>
+<entry key="value">./register</entry>
+<entry key="overwriteFromUrl">0</entry>
+<entry key="externalKey">09659c24-a855-408b-b0c5-ffc46c8c77a5</entry>
+</properties>

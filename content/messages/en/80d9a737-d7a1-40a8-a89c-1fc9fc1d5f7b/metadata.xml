@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">Payments.payment</entry>
+<entry key="lastModified">1412859872273</entry>
+<entry key="lcid">en</entry>
+<entry key="value">You have transfered {0} to user {1} account</entry>
+<entry key="externalKey">80d9a737-d7a1-40a8-a89c-1fc9fc1d5f7b</entry>
+</properties>

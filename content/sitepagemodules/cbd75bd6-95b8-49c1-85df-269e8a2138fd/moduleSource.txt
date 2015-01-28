@@ -1,0 +1,3 @@
+<div class="sample-warn" >
+    <i class="fa fa-lg fa-info-circle"></i> ${wpbMessages["General.app.warning"]?html}
+</div>

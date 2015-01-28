@@ -1,0 +1,2 @@
+<#assign date_now=wpbAppModel["date_now"] />
+${wpbFormatText(wpbMessages["Email.statement.subject"]?html,  date_now?datetime?string.short)}

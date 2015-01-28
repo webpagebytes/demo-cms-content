@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">Error.password.empty</entry>
+<entry key="lastModified">1404676957368</entry>
+<entry key="lcid">en</entry>
+<entry key="value">Password cannot be empty</entry>
+<entry key="externalKey">ea8c5af0-dc56-4cd4-840c-26974628da1b</entry>
+</properties>

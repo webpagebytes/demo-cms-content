@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="enabled">1</entry>
+<entry key="resourceExternalKey">e3e80d3e-ef9f-49fe-b78a-b42986fb8ea4</entry>
+<entry key="lastModified">1421789664867</entry>
+<entry key="resourceType">2</entry>
+<entry key="uri">/fa/{**}</entry>
+<entry key="httpOperation">GET</entry>
+<entry key="externalKey">e97137a4-c931-4364-885a-5b90ec9446bb</entry>
+<entry key="controllerClass"></entry>
+</properties>

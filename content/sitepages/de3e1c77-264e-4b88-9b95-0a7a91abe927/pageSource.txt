@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
+<fo:layout-master-set>
+<fo:simple-page-master master-name="A4" page-width="210mm" page-height="297mm" margin="10mm">
+  <fo:region-body margin-top="30mm" margin-bottom="8mm" />
+  <fo:region-before region-name="aheader" />
+  <fo:region-after region-name="afooter" />
+  </fo:simple-page-master>
+</fo:layout-master-set>
+<fo:page-sequence master-reference="A4" initial-page-number="1">
+  <fo:title> Account statement </fo:title>
+  <fo:static-content flow-name="aheader">
+      <fo:block border-color="#888888" border-width="none" border-style="solid" >
+		<fo:block-container position="absolute" top="2mm" left="2mm" width="40mm" height="20mm">
+                               <fo:block>
+                                   <fo:external-graphic src="<@wpbImage externalKey="88ec05a7-3634-4a3f-a05a-3dbd8c8a83e8" embedded="true" />" />       
+                               </fo:block>                	                                         
+		</fo:block-container>
+		<fo:block-container position="absolute" top="1mm" left="70mm" width="120mm" height="20mm">
+			<fo:block text-align="right">   
+			    <fo:basic-link  external-destination="url('http://www.webpagebytes.com')" color="blue" text-decoration="underline"> http://www.webpagebytes.com </fo:basic-link>
+			</fo:block>
+			<fo:block text-align="right">   
+			    Sample PDF generation
+			</fo:block>			
+		</fo:block-container>
+	</fo:block>
+  </fo:static-content>
+  <fo:static-content flow-name="afooter">
+	<fo:block> Account statement report. This is an example of how Webpagebytes CMS can generate PDF reports.</fo:block>
+  </fo:static-content>
+  <fo:flow flow-name="xsl-region-body">
+	<fo:block font-family="Times Roman">
+		<fo:list-block>		
+			<fo:list-item>
+				<fo:list-item-label end-indent="80mm">
+                                        <#assign user=wpbAppModel["user"]!{} />
+					<fo:block>
+						<fo:block font-size="2em"> ${user.userName?xml} </fo:block>
+						<fo:block>
+							${wpbMessages["Form.email"]?xml}: ${user.email?xml}
+						</fo:block>	
+						<fo:block>
+							${wpbMessages["General.account.open"]?xml}: ${user.open_date?date?string.short}
+						</fo:block>	
+					</fo:block>
+				</fo:list-item-label>
+				<fo:list-item-body start-indent="120mm">
+                                                <#assign account=wpbAppModel["account"]!"" />
+						<fo:block  text-align="center" padding-before="3mm" padding-after="3mm" background-color="#FFF1A5" border-color="#888888" border-width="medium" border-style="solid">
+							${wpbMessages["Home.account.balance"]?xml} <fo:inline font-size="1.8em"> ${account.balance?string.currency} </fo:inline>
+						</fo:block>
+				</fo:list-item-body>
+			</fo:list-item>
+		</fo:list-block>
+		
+
+		<fo:block space-before="10mm">
+                <fo:block font-size="1.2em">  ${wpbMessages["Menu.statements"]?xml} - ${wpbMessages["Menu.payments"]?xml} </fo:block>
+		<fo:table table-layout="fixed" width="100%" border-color="#888888" border-width="medium" border-style="solid">
+
+			<fo:table-column column-width="38mm"/>
+			<fo:table-column column-width="38mm"/>
+			<fo:table-column column-width="38mm"/>		
+			<fo:table-column column-width="38mm"/>
+			<fo:table-column column-width="38mm"/>
+
+			<fo:table-header background-color="#DFDFDF">
+			  <fo:table-cell padding-before="2mm" padding-after="2mm" padding-start="1mm">
+				<fo:block font-weight="bold"> ${wpbMessages["General.time"]?xml} </fo:block>
+			  </fo:table-cell>
+			  <fo:table-cell padding-before="2mm" padding-after="2mm">
+				<fo:block font-weight="bold"> ${wpbMessages["General.transaction.identifier"]?xml} </fo:block>
+			  </fo:table-cell>
+			  <fo:table-cell padding-before="2mm" padding-after="2mm">
+				<fo:block font-weight="bold"> ${wpbMessages["General.amount"]?xml} </fo:block>
+			  </fo:table-cell>
+			  <fo:table-cell padding-before="2mm" padding-after="2mm">
+				<fo:block font-weight="bold"> ${wpbMessages["General.payer"]?xml}  </fo:block>
+			  </fo:table-cell>
+			  <fo:table-cell padding-before="2mm" padding-after="2mm">
+				<fo:block font-weight="bold"> ${wpbMessages["General.receiver"]?xml}  </fo:block>
+			  </fo:table-cell>
+			</fo:table-header>
+			<fo:table-body>
+                           <#assign transactions=wpbAppModel["transactions"] />
+                           <#list transactions as item >
+                               <fo:table-row background-color="#FEFEFE">
+			           <fo:table-cell padding-before="2mm" padding-after="2mm" padding-start="1mm">
+				       <fo:block> ${item.date?datetime?string.short} </fo:block>
+				   </fo:table-cell>
+			           <fo:table-cell padding-before="2mm" padding-after="2mm" padding-start="1mm">
+				       <fo:block> ${item.id?string.computer} </fo:block>
+				   </fo:table-cell>
+			           <fo:table-cell padding-before="2mm" padding-after="2mm" padding-start="1mm">
+				       <fo:block> ${item.amount?string.currency} </fo:block>
+				   </fo:table-cell>
+			           <fo:table-cell padding-before="2mm" padding-after="2mm" padding-start="1mm">
+				       <fo:block> ${item.sourceUserName?xml} </fo:block>
+				   </fo:table-cell>
+			           <fo:table-cell padding-before="2mm" padding-after="2mm" padding-start="1mm">
+				       <fo:block> ${item.destinationUserName?xml} </fo:block>
+				   </fo:table-cell>
+                              </fo:table-row>			
+			 </#list>	
+                        <#if (transactions?size == 0)>
+                            <fo:table-row>
+			           <fo:table-cell padding-before="2mm" padding-after="2mm" padding-start="1mm" number-columns-spanned="5">
+				       <fo:block> ${wpbMessages["General.account.nooperations"]?xml} </fo:block>
+				   </fo:table-cell>                               
+                            </fo:table-row>
+                        </#if>
+			</fo:table-body>
+		</fo:table>
+		</fo:block>
+
+
+		<fo:block space-before="10mm">
+                <fo:block font-size="1.2em"> ${wpbMessages["Menu.statements"]?xml} - ${wpbMessages["Menu.deposits"]?xml} </fo:block>
+		<fo:table table-layout="fixed" width="100%" border-color="#888888" border-width="medium" border-style="solid">
+
+			<fo:table-column column-width="63mm"/>
+			<fo:table-column column-width="63mm"/>
+			<fo:table-column column-width="63mm"/>		
+			
+			<fo:table-header background-color="#DFDFDF">
+			  <fo:table-cell padding-before="2mm" padding-after="2mm" padding-start="1mm">
+				<fo:block font-weight="bold"> ${wpbMessages["General.time"]?xml} </fo:block>
+			  </fo:table-cell>
+			  <fo:table-cell padding-before="2mm" padding-after="2mm">
+				<fo:block font-weight="bold"> ${wpbMessages["General.transaction.identifier"]?xml} </fo:block>
+			  </fo:table-cell>
+			  <fo:table-cell padding-before="2mm" padding-after="2mm">
+				<fo:block font-weight="bold"> ${wpbMessages["General.amount"]?xml} </fo:block>
+			  </fo:table-cell>
+			</fo:table-header>
+			<fo:table-body>
+                           <#assign deposits=wpbAppModel["deposits"] />
+                           <#list deposits as item >
+                               <fo:table-row background-color="#FEFEFE">
+			           <fo:table-cell padding-before="2mm" padding-after="2mm" padding-start="1mm">
+				       <fo:block> ${item.date?datetime?string.short} </fo:block>
+				   </fo:table-cell>
+			           <fo:table-cell padding-before="2mm" padding-after="2mm" padding-start="1mm">
+				       <fo:block> ${item.id?string.computer} </fo:block>
+				   </fo:table-cell>
+			           <fo:table-cell padding-before="2mm" padding-after="2mm" padding-start="1mm">
+				       <fo:block> ${item.amount?string.currency} </fo:block>
+				   </fo:table-cell>
+			        </fo:table-row>			
+			 </#list>	
+                        <#if (deposits?size == 0)>
+                            <fo:table-row>
+			           <fo:table-cell padding-before="2mm" padding-after="2mm" padding-start="1mm" number-columns-spanned="3">
+				       <fo:block> ${wpbMessages["General.account.nooperations"]?xml} </fo:block>
+				   </fo:table-cell>                               
+                            </fo:table-row>
+                        </#if>
+			</fo:table-body>
+		</fo:table>
+		</fo:block>
+
+		<fo:block space-before="10mm">
+                <fo:block font-size="1.2em">  ${wpbMessages["Menu.statements"]?xml} - ${wpbMessages["Menu.withdrawals"]?xml} </fo:block>
+		<fo:table table-layout="fixed" width="100%" border-color="#888888" border-width="medium" border-style="solid">
+
+			<fo:table-column column-width="63mm"/>
+			<fo:table-column column-width="63mm"/>
+			<fo:table-column column-width="63mm"/>		
+			
+			<fo:table-header background-color="#DFDFDF">
+			  <fo:table-cell padding-before="2mm" padding-after="2mm" padding-start="1mm">
+				<fo:block font-weight="bold"> ${wpbMessages["General.time"]?xml} </fo:block>
+			  </fo:table-cell>
+			  <fo:table-cell padding-before="2mm" padding-after="2mm">
+				<fo:block font-weight="bold"> ${wpbMessages["General.transaction.identifier"]?xml} </fo:block>
+			  </fo:table-cell>
+			  <fo:table-cell padding-before="2mm" padding-after="2mm">
+				<fo:block font-weight="bold"> ${wpbMessages["General.amount"]?xml}  </fo:block>
+			  </fo:table-cell>
+			</fo:table-header>
+			<fo:table-body>
+                           <#assign withdrawals=wpbAppModel["withdrawals"] />
+                           <#list withdrawals as item >
+                               <fo:table-row background-color="#FEFEFE">
+			           <fo:table-cell padding-before="2mm" padding-after="2mm" padding-start="1mm">
+				       <fo:block> ${item.date?datetime?string.short} </fo:block>
+				   </fo:table-cell>
+			           <fo:table-cell padding-before="2mm" padding-after="2mm" padding-start="1mm">
+				       <fo:block> ${item.id?string.computer} </fo:block>
+				   </fo:table-cell>
+			           <fo:table-cell padding-before="2mm" padding-after="2mm" padding-start="1mm">
+				       <fo:block> ${item.amount?string.currency} </fo:block>
+				   </fo:table-cell>
+			        </fo:table-row>			
+			 </#list>	
+                        <#if (withdrawals?size == 0)>
+                            <fo:table-row>
+			           <fo:table-cell padding-before="2mm" padding-after="2mm" padding-start="1mm" number-columns-spanned="3">
+				       <fo:block> ${wpbMessages["General.account.nooperations"]?xml} </fo:block>
+				   </fo:table-cell>                               
+                            </fo:table-row>
+                        </#if>
+			</fo:table-body>
+		</fo:table>
+		</fo:block>
+
+
+	</fo:block>
+
+   </fo:flow>
+</fo:page-sequence>
+
+</fo:root>

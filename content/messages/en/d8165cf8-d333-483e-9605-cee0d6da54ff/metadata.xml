@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">Withdrawals.limit</entry>
+<entry key="lastModified">1412844346416</entry>
+<entry key="lcid">en</entry>
+<entry key="value">You can withdraw up to {0}</entry>
+<entry key="externalKey">d8165cf8-d333-483e-9605-cee0d6da54ff</entry>
+</properties>

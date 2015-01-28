@@ -1,0 +1,1 @@
+${wpbMessages["Email.signup.welcome"]?html}

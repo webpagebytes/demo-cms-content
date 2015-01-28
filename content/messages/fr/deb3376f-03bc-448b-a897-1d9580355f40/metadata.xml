@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">Error.username.alreadyExists</entry>
+<entry key="lastModified">1415989643962</entry>
+<entry key="lcid">fr</entry>
+<entry key="value">Nom d'utilisateur existe déjà</entry>
+<entry key="externalKey">deb3376f-03bc-448b-a897-1d9580355f40</entry>
+</properties>

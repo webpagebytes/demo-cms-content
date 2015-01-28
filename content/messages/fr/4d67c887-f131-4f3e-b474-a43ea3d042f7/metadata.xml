@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">Error.transaction.invalid</entry>
+<entry key="lastModified">1412852011515</entry>
+<entry key="lcid">fr</entry>
+<entry key="value">Invalid identifiant de transaction</entry>
+<entry key="externalKey">4d67c887-f131-4f3e-b474-a43ea3d042f7</entry>
+</properties>

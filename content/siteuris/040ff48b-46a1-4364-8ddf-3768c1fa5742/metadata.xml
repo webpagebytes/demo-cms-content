@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="enabled">1</entry>
+<entry key="resourceExternalKey"></entry>
+<entry key="lastModified">1405089450974</entry>
+<entry key="resourceType">3</entry>
+<entry key="uri">/{language}/deposit</entry>
+<entry key="httpOperation">POST</entry>
+<entry key="externalKey">040ff48b-46a1-4364-8ddf-3768c1fa5742</entry>
+<entry key="controllerClass">com.webpagebytes.wpbsample.controllers.PerformDepositController</entry>
+</properties>

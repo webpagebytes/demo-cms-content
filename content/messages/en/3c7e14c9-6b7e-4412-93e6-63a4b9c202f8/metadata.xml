@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">Reports.depositsWithdrawals.count</entry>
+<entry key="lastModified">1412769286072</entry>
+<entry key="lcid">en</entry>
+<entry key="value">Deposits and withdrawals count</entry>
+<entry key="externalKey">3c7e14c9-6b7e-4412-93e6-63a4b9c202f8</entry>
+</properties>

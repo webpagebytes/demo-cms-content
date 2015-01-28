@@ -1,0 +1,118 @@
+<#assign basePath=wpbRequest["WPB_GLOBAL_BASE_URL"] >
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style>
+<@wpbModule externalKey="418f15df-6293-434a-beb1-3faa4b1b374b" name="email-css" />
+</style>
+</head>
+<body>
+<div class="header">
+    <img class="image" src="${basePath}/img/logo2.png" > 
+    <div class="contact"> 
+         <div>
+             <a href="http://www.webpagebytes.com"> ${basePath}/</a>
+         </div>
+         <div>
+            ${wpbMessages["Email.statement.sample"]?html}
+         </div>  
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="warn"> 
+${wpbMessages["Email.statement.warn"]?html}
+</div>
+<div>
+     <#assign user=wpbAppModel["user"]!{} />
+     <#assign date_now=wpbAppModel["date_now"] />
+     <div class="user-details"> 
+        ${wpbMessages["Form.username"]?html}: <span> ${user.userName?html} </span> <br>
+        ${wpbFormatText(wpbMessages["Email.statement.date"]?html, date_now?datetime?string.short)}  
+     </div>
+     <#assign account=wpbAppModel["account"]!{} />
+     <div class="balance">
+        ${wpbMessages["Home.account.balance"]?html} <span> ${account.balance?string.currency} </span>
+     </div>
+     <div class="clear"></div>
+</div>
+
+<h2> ${wpbMessages["Menu.statements"]?html} - ${wpbMessages["Menu.payments"]?html} </h2>
+<table>
+     <tr>
+         <th> ${wpbMessages["General.time"]?html} </th>
+         <th> ${wpbMessages["General.transaction.identifier"]?html} </th>
+         <th> ${wpbMessages["General.amount"]?html} </th>
+         <th> ${wpbMessages["General.payer"]?html} </th>
+         <th> ${wpbMessages["General.receiver"]?html} </th>
+     </tr>
+     <#assign transactions=wpbAppModel["transactions"] />
+     <#list transactions as item >
+         <tr>
+                <td>  ${item.date?datetime?string.short} </td>
+                <td>  ${item.id?string.computer} </td>
+                <td>  ${item.amount?string.currency}  </td>
+                <td> ${item.sourceUserName?html} </td>
+                <td> ${item.destinationUserName?html} </td> 
+        </tr>
+     </#list>
+     <#if (transactions?size == 0)>
+         <tr>
+              <td colspan="5">
+                   ${wpbMessages["General.account.nooperations"]?html}
+              </td>                               
+         </tr>
+     </#if>
+</table>
+
+<h2> ${wpbMessages["Menu.statements"]?xml} - ${wpbMessages["Menu.deposits"]?xml} </h2>
+<table>
+     <tr>
+         <th> ${wpbMessages["General.time"]?html} </th>
+         <th> ${wpbMessages["General.transaction.identifier"]?html} </th>
+         <th> ${wpbMessages["General.amount"]?html} </th>
+     </tr>
+     <#assign deposits=wpbAppModel["deposits"] />
+     <#list deposits as item >
+         <tr>
+                <td>  ${item.date?datetime?string.short} </td>
+                <td>  ${item.id?string.computer} </td>
+                <td>  ${item.amount?string.currency}  </td>
+        </tr>
+     </#list>
+     <#if (deposits?size == 0)>
+         <tr>
+              <td colspan="3">
+                   ${wpbMessages["General.account.nooperations"]?html}
+              </td>                               
+         </tr>
+     </#if>
+</table>
+
+<h2> ${wpbMessages["Menu.statements"]?xml} - ${wpbMessages["Menu.withdrawals"]?xml} </h2>
+<table>
+     <tr>
+         <th> ${wpbMessages["General.time"]?html} </th>
+         <th> ${wpbMessages["General.transaction.identifier"]?html} </th>
+         <th> ${wpbMessages["General.amount"]?html} </th>
+     </tr>
+     <#assign withdrawals=wpbAppModel["withdrawals"] />
+     <#list withdrawals as item >
+         <tr>
+                <td>  ${item.date?datetime?string.short} </td>
+                <td>  ${item.id?string.computer} </td>
+                <td>  ${item.amount?string.currency}  </td>
+        </tr>
+     </#list>
+     <#if (withdrawals?size == 0)>
+         <tr>
+              <td colspan="3">
+                   ${wpbMessages["General.account.nooperations"]?html}
+              </td>                               
+         </tr>
+     </#if>
+</table>
+<div class="footer">
+${wpbMessages["Footer.logo"]?html}  , <a href="${basePath}/privacy"> ${wpbMessages["Footer.privacy"]?html} </a>
+</div>
+</body>
+</html>

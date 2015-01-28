@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">Error.password.different</entry>
+<entry key="lastModified">1412843012475</entry>
+<entry key="lcid">fr</entry>
+<entry key="value">Les mots de passe ne correspondent pas</entry>
+<entry key="externalKey">82db2a8a-db7a-4f09-a70e-2d5bd4183189</entry>
+</properties>

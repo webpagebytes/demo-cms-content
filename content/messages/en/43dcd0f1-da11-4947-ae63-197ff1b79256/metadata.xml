@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">Error.password.invalid</entry>
+<entry key="lastModified">1404973038596</entry>
+<entry key="lcid">en</entry>
+<entry key="value">Invalid password</entry>
+<entry key="externalKey">43dcd0f1-da11-4947-ae63-197ff1b79256</entry>
+</properties>

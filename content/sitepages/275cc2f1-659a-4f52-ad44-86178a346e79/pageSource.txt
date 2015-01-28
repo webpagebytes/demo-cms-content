@@ -1,0 +1,144 @@
+<html>
+<head>
+<style>
+.title
+{
+width: 600px;
+text-align:center;
+color: #FF0000;
+font-size: 20px;
+font-weight: bold;
+}
+h1
+{
+padding-top: 20px;
+font-size: 16px;
+font-weight: bold;
+border-bottom: 1px solid #000000;
+width: 600px;
+}
+.table-stats 
+{
+    border-collapse: collapse;
+    width:300px;
+    text-align:center;
+}
+.dataCount
+{
+color: #FF7F27;
+}
+.dataSum
+{
+color: #007F27
+}
+.line-elem
+{
+float:left;
+}
+.table-stats, .table-stats th, .table-stats td 
+{
+    border: 1px solid #98bf21;
+}
+.table-stats th
+{
+background-color: #A7C942;
+color: #FFFFFF;
+}
+.table-stats td, .table-stats th
+{
+padding: 3px 15px;
+}
+.footer
+{
+padding: 10px 0px;
+color: #1F0000;
+font-size:12px;
+}
+.clear
+{
+clear:both;
+}
+</style>
+</head>
+<body>
+<#assign dates=wpbAppModel["dates"]![] keys=wpbAppModel["keys"]![] usersCountPerDays=wpbAppModel["usersCountPerDays"]!{}  countTransactionsPerDay=wpbAppModel["countTransactionsPerDay"]!{} sumTransactionsPerDay=wpbAppModel["sumTransactionsPerDay"]!{}  countDepositsPerDay=wpbAppModel["countDepositsPerDay"]!{} sumDepositsPerDay=wpbAppModel["sumDepositsPerDay"]!{} countWithdrawalsPerDay=wpbAppModel["countWithdrawalsPerDay"]!{} sumWithdrawalsPerDay=wpbAppModel["sumWithdrawalsPerDay"]!{} />
+<div class="title"> Report for ${wpbAppModel["yesterday"]?string("YYYY/MM/dd")} </div>
+<h1> Number of users created in the last 7 days </h1>
+<table class="table-stats line-elem">
+    <tr style="background-color:#556677"> <th> Date </th> <th> Count </th></tr>
+    <tbody>
+    <#list keys as key>
+        <#assign index=(keys?size-key_index-1) />       
+       <tr>
+           <td> ${dates[index]?string("YYYY/MM/dd")}</td>
+          <td  class="dataCount">${usersCountPerDays[keys[index]]!0}</td>
+       </tr>
+    </#list>
+    </tbody>
+<table>
+<div class="image-stats">
+    <img src="data:image/png;base64,${wpbAppModel["users_img"]}" />      
+</div>
+<div class="clear"></div>
+
+<h1> Transactions summary </h1>
+<table class="table-stats line-elem">
+    <tr style="background-color:#556677"> <th> Date </th> <th> Count </th> <th> Volume </th></tr>
+    <tbody>
+    <#list keys as key>
+        <#assign index=(keys?size-key_index-1) />       
+       <tr>
+           <td> ${dates[index]?string("YYYY/MM/dd")}</td>
+          <td  class="dataCount">${countTransactionsPerDay[keys[index]]!0}</td>
+          <td  class="dataSum">${sumTransactionsPerDay[keys[index]]!0}</td>
+       </tr>
+    </#list>
+    </tbody>
+<table>
+<div class="image-stats">
+    <img src="data:image/png;base64,${wpbAppModel["transactions_img"]}" />      
+</div>
+<div class="clear"></div>
+
+<h1> Deposits summary </h1>
+<table class="table-stats line-elem">
+    <tr> <th> Date </th> <th> Count </th> <th> Volume </th></tr>
+    <tbody>
+    <#list keys as key>
+        <#assign index=(keys?size-key_index-1) />       
+       <tr>
+           <td> ${dates[index]?string("YYYY/MM/dd")}</td>
+          <td  class="dataCount">${countDepositsPerDay[keys[index]]!0}</td>
+          <td  class="dataSum">${sumDepositsPerDay[keys[index]]!0}</td>
+       </tr>
+    </#list>
+    </tbody>
+<table>
+<div class="image-stats">
+    <img src="data:image/png;base64,${wpbAppModel["deposits_img"]}" />      
+</div>
+<div class="clear"></div>
+
+<h1> Withdrawals summary </h1>
+<table  class="table-stats line-elem">
+    <tr> <th> Date </th> <th> Count </th> <th> Volume </th></tr>
+    <tbody>
+    <#list keys as key>
+        <#assign index=(keys?size-key_index-1) />       
+       <tr>
+           <td> ${dates[index]?string("YYYY/MM/dd")}</td>
+          <td class="dataCount">${countWithdrawalsPerDay[keys[index]]!0}</td>
+          <td class="dataSum">${sumWithdrawalsPerDay[keys[index]]!0}</td>
+       </tr>
+    </#list>
+    </tbody>
+<table>
+<div class="image-stats">
+    <img src="data:image/png;base64,${wpbAppModel["withdrawals_img"]}" />      
+</div>
+<div class="clear"></div>
+<div class="footer">
+Sample Webpagebytes CMS application does not handle real transactions, it is used only to exercise the Webpagebytes CMS features.
+</div>
+</body>
+</html>

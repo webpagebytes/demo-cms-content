@@ -1,0 +1,15 @@
+<p>
+	 Webpagebytes CMS can generate XSL-FO content which can be converted to various formats: images, rich text documents, pdf files. 
+</p>
+<p>
+	 <br />
+</p>
+<p>
+	 The image below is a dynamic image, where the colors, text messages, image size can be customized by editing the XLS-FO template. 
+</p>
+<p>
+	 <br />
+</p>
+<p>
+	 With Webpagebytes CMS the content of the images generated can be edited similar to a web html page.
+</p>

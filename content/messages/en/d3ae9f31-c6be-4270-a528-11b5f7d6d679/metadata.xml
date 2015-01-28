@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">Profile.confirmEmail.link</entry>
+<entry key="lastModified">1421871982002</entry>
+<entry key="lcid">en</entry>
+<entry key="value">Please confirm your email address by accessing this link</entry>
+<entry key="externalKey">d3ae9f31-c6be-4270-a528-11b5f7d6d679</entry>
+</properties>

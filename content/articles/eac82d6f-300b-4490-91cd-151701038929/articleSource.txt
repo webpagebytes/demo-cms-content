@@ -1,0 +1,12 @@
+<p>
+	 Common HTML fragments are organized by Webpagebytes CMS under <strong>'Page modules'</strong>, these can be used in web pages, emails, PDF documents. 
+</p>
+<p>
+	 <br />
+</p>
+<p>
+	 The menu below is an example of a page module, the content is managed in a single place and reused across multiple web pages.
+</p>
+<p>
+	 <br />
+</p>

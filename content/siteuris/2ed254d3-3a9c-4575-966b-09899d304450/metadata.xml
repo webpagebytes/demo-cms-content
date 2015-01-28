@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="enabled">1</entry>
+<entry key="resourceExternalKey"></entry>
+<entry key="lastModified">1405255810587</entry>
+<entry key="resourceType">3</entry>
+<entry key="uri">/statements-withdrawals</entry>
+<entry key="httpOperation">GET</entry>
+<entry key="externalKey">2ed254d3-3a9c-4575-966b-09899d304450</entry>
+<entry key="controllerClass">com.webpagebytes.wpbsample.controllers.GetUserDWController</entry>
+</properties>

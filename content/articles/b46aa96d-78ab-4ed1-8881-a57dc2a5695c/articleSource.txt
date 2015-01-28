@@ -1,0 +1,9 @@
+<p>
+	 This is a virtual operation to generate dynamic data. 
+</p>
+<p>
+	 <br />
+</p>
+<p>
+	 Perform this operation and see the result across multiple contents: account statement web page, emails, report image, pdf file, SVG reports.
+</p>

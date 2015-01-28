@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">General.transfer.X.Y</entry>
+<entry key="lastModified">1412591160746</entry>
+<entry key="lcid">en</entry>
+<entry key="value">Transfer {0} from {1} to {2}</entry>
+<entry key="externalKey">481e89ca-4bdb-42f2-9992-8b1211e5bc6d</entry>
+</properties>

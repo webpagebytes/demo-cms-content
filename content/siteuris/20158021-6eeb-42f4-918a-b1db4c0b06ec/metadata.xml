@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="enabled">1</entry>
+<entry key="resourceExternalKey">b50f6f60-183a-4f3e-85a5-202fd7ecdaf5</entry>
+<entry key="lastModified">1404765330527</entry>
+<entry key="resourceType">3</entry>
+<entry key="uri">/{language}/logout</entry>
+<entry key="httpOperation">GET</entry>
+<entry key="externalKey">20158021-6eeb-42f4-918a-b1db4c0b06ec</entry>
+<entry key="controllerClass">com.webpagebytes.wpbsample.controllers.LogoutController</entry>
+</properties>

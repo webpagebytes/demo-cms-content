@@ -1,0 +1,8 @@
+<html>
+<head>
+<link rel="shortcut icon" href="./img/favicon.ico">
+</head>
+<body>
+<@wpbArticle externalKey="aa2e6372-e5a8-4bae-aa5f-2571716c52d4" name="privacy policy" />
+</body>
+</html>

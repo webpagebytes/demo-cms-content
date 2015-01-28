@@ -1,0 +1,51 @@
+<#assign basePath=wpbRequest["WPB_GLOBAL_BASE_URL"] >
+<#assign mainMenuSelection=wpbPageParams["mainMenuSelection"]!"" >
+<#assign homeCss="" depositsCss="" paymentsCss="" withdrawalsCss="" statementsCss="" profileCss="" reportsCss="">
+
+<#switch mainMenuSelection>
+    <#case "home">
+         <#assign homeCss="active">
+         <#break> 
+    <#case "deposits">
+         <#assign depositsCss="active">
+         <#break> 
+    <#case "payments">
+         <#assign paymentsCss="active">
+         <#break> 
+    <#case "withdrawals">
+         <#assign withdrawalsCss="active">
+         <#break> 
+    <#case "reports">
+         <#assign reportsCss="active">
+         <#break>    
+<#case "statements">
+         <#assign statementsCss="active">
+         <#break> 
+   <#case "profile">
+         <#assign profileCss="active">
+         <#break> 
+</#switch>
+
+<div class="menucontainer">
+		<!--<div class="menutop"></div> -->
+		<ul class="menu">
+			<li class=""> 
+                                <span class="why"> ${wpbMessages["General.whats.this"]?html} 
+                                              <span class="why-details">
+                                                 <div class="text">
+                                                    <@wpbArticle externalKey="eac82d6f-300b-4490-91cd-151701038929" title="what's this - controllers" />
+                                                 </div>
+                                              </span>
+                                </span>
+                        </li>
+			<li class="item ${homeCss}"> <a href="./home">  ${wpbMessages["Menu.home"]}</a> </li>
+			<li class="item ${depositsCss}"> <a href="./deposits"> ${wpbMessages["Menu.deposits"]}</a> </li>
+			<li class="item ${paymentsCss}"> <a href="./payments"> ${wpbMessages["Menu.payments"]}</a> </li>
+			<li class="item ${withdrawalsCss}"> <a href="./withdrawals">${wpbMessages["Menu.withdrawals"]}</a> </li>
+			<li class="item ${statementsCss}"> <a href="./statements-transactions"> ${wpbMessages["Menu.statements"]} </a> </li>
+			<li class="item ${profileCss}"> <a href="./profile"> ${wpbMessages["Menu.profile"]} </a> </li>
+			<li class="item ${reportsCss}"> <a href="./reports"> ${wpbMessages["Menu.reports"]}</a> </li>
+		</ul>
+		<div class="menubottom"></div>
+</div>
+

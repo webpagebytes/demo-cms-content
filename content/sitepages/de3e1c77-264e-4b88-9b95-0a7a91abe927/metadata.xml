@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">account-statement-pdf-fo</entry>
+<entry key="lastModified">1419866031702</entry>
+<entry key="isTemplateSource">1</entry>
+<entry key="externalKey">de3e1c77-264e-4b88-9b95-0a7a91abe927</entry>
+<entry key="pageModelProvider">com.webpagebytes.wpbsample.controllers.AccountStatementPageController</entry>
+<entry key="contentType">text/xml</entry>
+</properties>

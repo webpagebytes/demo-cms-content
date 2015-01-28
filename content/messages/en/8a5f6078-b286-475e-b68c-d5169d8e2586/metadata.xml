@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">Email.statement.warn</entry>
+<entry key="lastModified">1421049314598</entry>
+<entry key="lcid">en</entry>
+<entry key="value">This email is only for demonstration purposes, it does not contain real financial transactions!</entry>
+<entry key="externalKey">8a5f6078-b286-475e-b68c-d5169d8e2586</entry>
+</properties>

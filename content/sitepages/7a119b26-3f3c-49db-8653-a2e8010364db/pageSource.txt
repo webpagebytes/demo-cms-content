@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
+<fo:layout-master-set>
+<fo:simple-page-master master-name="A4" page-width="300px" page-height="200px">
+  <fo:region-body />
+</fo:simple-page-master>
+</fo:layout-master-set>
+<fo:page-sequence master-reference="A4" initial-page-number="1">
+<fo:flow flow-name="xsl-region-body">
+       <#assign color1="#FF7F27" color2="#007F27" />
+       <#assign dates=wpbAppModel["dates"]![] keys=wpbAppModel["keys"]![]  maxHeight=850 linesCount=5 maxData1=0 maxData2=0 type=wpbAppModel["type"]!"" />     
+       <#assign data2=wpbAppModel["sumTransactionsPerDay"]!{}  data1=wpbAppModel["countTransactionsPerDay"]!{} />
+       <#if (type=="d") >
+          <#assign data2=wpbAppModel["sumDepositsPerDay"]!{}  data1=wpbAppModel["countDepositsPerDay"]!{} />
+       </#if>
+       <#if (type=="w") >
+          <#assign data2=wpbAppModel["sumWithdrawalsPerDay"]!{}  data1=wpbAppModel["countWithdrawalsPerDay"]!{} />
+       </#if>
+
+       <fo:block  >
+ 		<fo:instream-foreign-object>
+<#list keys as key>
+      <#if ((maxData1<data1[key]!0) && data1[key]??)>
+         <#assign maxData1=data1[key] />
+      </#if>
+      <#if ((maxData2<data2[key]!0) && data2[key]??)>
+         <#assign maxData2=data2[key] />
+      </#if> 
+</#list>
+<svg width="290px" height="190px" viewBox="0 0 1200 1000" version="1.1" xmlns="http://www.w3.org/2000/svg">
+	<#list keys as key>
+		<#assign index=key_index barWidth=71 />
+		<#assign xRect=(100+index*2*barWidth) />    
+		<#if (maxData1>0 && data1[key]??)>
+			<#assign yRect1=(data1[key]*maxHeight/maxData1)?floor />      
+		<#else>
+			<#assign yRect1=0 />           
+		</#if>
+		<#if (maxData2>0 && data2[key]??)>
+			<#assign yRect2=(data2[key]*maxHeight/maxData2)?floor />      
+		<#else>
+			<#assign yRect2=0 />           
+		</#if>
+
+		<rect x="${xRect?string.computer}" y="${(50+maxHeight-yRect1)?string.computer}" width="${barWidth?string.computer}" height="${yRect1?string.computer}" fill="${color1}"  />
+		<rect x="${(xRect+barWidth)?string.computer}" y="${(50+maxHeight-yRect2)?string.computer}" width="${(barWidth-5)?string.computer}" height="${yRect2?string.computer}" fill="${color2}"  />
+
+                <text x="${(xRect+barWidth)?floor?string.computer}" y="${950}" text-anchor="middle" font-size="50"> ${(dates[index])?date?string("dd")} </text> 
+        </#list>
+        <path d="M10,903 L1190,903" stroke="#333333" stroke-width="2" />
+        <#assign lineValue2=maxData2 />
+        <#assign lineValue1=maxData1 />
+        <#if (lineValue1==0)>
+             <#assign lineValue1=1 />
+        </#if>
+        <#if (lineValue2==0)>
+            <#assign lineValue2=1 />
+        </#if>
+         <#list 1..linesCount as lineIndex>
+              <#assign yLine=(50+maxHeight-(maxHeight/linesCount)*lineIndex) />
+              <path d="M10,${yLine?string.computer} L1190,${yLine?string.computer}" stroke="#333333" stroke-width="0.5" />
+         </#list>
+         <text x="1190" y="40" text-anchor="end" font-size="50" fill="${color2}"> ${lineValue2?string.currency}  </text>
+         <text x="10" y="40" font-size="50" fill="${color1}"> ${lineValue1} </text>
+ </svg>
+     
+		</fo:instream-foreign-object>
+       </fo:block> 
+</fo:flow>
+</fo:page-sequence>
+</fo:root>

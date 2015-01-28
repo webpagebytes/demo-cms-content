@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">Deposits.limit</entry>
+<entry key="lastModified">1412844663161</entry>
+<entry key="lcid">fr</entry>
+<entry key="value">Vous pouvez déposer jusqu''à {0}</entry>
+<entry key="externalKey">c490bd1d-b4fe-472c-8149-8f7e8613c26b</entry>
+</properties>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">Email.verification.invalid</entry>
+<entry key="lastModified">1421953957192</entry>
+<entry key="lcid">en</entry>
+<entry key="value">Invalid verification code! Go to {0} Sign Up page {1}</entry>
+<entry key="externalKey">578f48e7-ddf0-439f-9067-6f73ddca8780</entry>
+</properties>

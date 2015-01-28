@@ -1,0 +1,45 @@
+<#assign basePath=wpbRequest["WPB_GLOBAL_BASE_URL"] />
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+<@wpbModule externalKey="418f15df-6293-434a-beb1-3faa4b1b374b" name="email-css" />
+</style>
+</head>
+<body>
+<div class="header">
+    <img class="image" src="${basePath}/img/logo2.png" > 
+    <div class="contact"> 
+         <div>
+             <a href="${basePath}/"> ${basePath}/</a>
+         </div>
+         <div>
+            ${wpbMessages["Email.statement.sample"]?html}
+         </div>  
+    </div>
+    <div class="clear"></div>
+</div>
+<#assign user=wpbAppModel["user"]!{}  />
+<div class="warn"> 
+${wpbMessages["General.app.warning"]?html}
+</div>
+
+<p>
+${wpbFormatText(wpbMessages["Header.hi"],  user.userName)?html} <br>
+${wpbMessages["SignUp.success"]?html} 
+</p>
+
+<p>
+<#assign confirmLinkWithCode=(basePath+"/" +wpbLocale["WPB_LOCALE_LANGUAGE"]+ "/confirmEmail?code=" + user.confirmEmailRandom?url)?string  confirmLink=(basePath+"/" +wpbLocale["WPB_LOCALE_LANGUAGE"]+ "/confirmEmail")?string />
+${wpbMessages["Profile.confirmEmail.link"]?html} <a href="${confirmLinkWithCode}" target="_blank" > ${confirmLinkWithCode?html} </a>
+</p>
+<p>
+${wpbFormatText(wpbMessages["General.regards"]?html, "<br>")}
+</p>
+
+<div class="footer">
+${wpbMessages["Footer.logo"]?html}  , <a href="${basePath}/privacy"> ${wpbMessages["Footer.privacy"]?html} </a>
+</div>
+
+</body>
+</html>

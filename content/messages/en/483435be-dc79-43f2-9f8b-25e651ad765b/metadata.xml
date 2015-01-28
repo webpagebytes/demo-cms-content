@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">Statements.Email.success</entry>
+<entry key="lastModified">1420819964121</entry>
+<entry key="lcid">en</entry>
+<entry key="value">Email sent with success</entry>
+<entry key="externalKey">483435be-dc79-43f2-9f8b-25e651ad765b</entry>
+</properties>

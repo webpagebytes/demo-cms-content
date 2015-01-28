@@ -1,0 +1,41 @@
+<html>
+<@wpbModule externalKey="d7101b49-8369-4d64-ac1e-87bd88c54b9c" name="head" />
+ 
+<body>
+<@wpbModule externalKey="c83c01ce-8696-4726-a6c0-c8575e829db7" name="header" />
+<#assign errors=wpbAppModel["errors"]!{} /> 
+<#assign values=wpbAppModel["values"]!{} />
+<@wpbModule externalKey="cbd75bd6-95b8-49c1-85df-269e8a2138fd" name="app-warning" />
+<div class="formbox loginbox">
+	<form action="./login" method="post">
+		<div class="formline"> <div class="title"> ${wpbMessages["Login.form.title"]} 
+                     <span class="why"> ${wpbMessages["Login.form.why"]?html} 
+                          <span class="why-details">
+                              <div class="text">
+                                       <@wpbArticle externalKey="e704b8af-71c5-4288-bf28-dbdc2bbfa0f9" title="why-sign-in" />
+                              </div>
+                         </span>
+                      </span>
+                </div> </div>
+		<div class="formline"> 
+                    <span class="label text">${wpbMessages["Login.form.username"]?html}</span> 
+                    <input class="inputtext" type="text" name="username"> 
+                    <#if errors["username"]??>
+                        <span class="text error"> ${wpbMessages[errors["username"]]?html}</span>
+                    </#if> 
+                </div>   
+		<div class="formline"> 
+                    <span class="label text">${wpbMessages["Login.form.password"]?html}</span>  
+                    <input class="inputtext" type="password" name="password">
+                   <#if errors["password"]??>
+                        <span class="text error"> ${wpbMessages[errors["password"]]?html}</span>
+                    </#if>  
+                </div>
+		<div class="formline"> <span class="label text"></span> <input class="button but-green" type="submit" value="${wpbMessages["Login.form.login"]?html}"> <span class="text"> ${wpbMessages["Login.form.signup.message"]?html} <a href="./register"> ${wpbMessages["Header.signup"]?html} </a> </span></div>
+	</form>
+</div>
+
+<@wpbModule externalKey="adfd6ce3-948b-4247-9109-c71d3c5bfdb0" name="footer" />
+
+</body>
+</html>

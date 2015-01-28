@@ -1,0 +1,29 @@
+<#assign dates=wpbAppModel["dates"]![] keys=wpbAppModel["keys"]![] usersCountPerDays=wpbAppModel["usersCountPerDays"]!{}  maxCount=0 maxHeight=900 linesCount=5 />
+<#list keys as key>
+      <#if (maxCount<usersCountPerDays[key]!0)>
+         <#assign maxCount=usersCountPerDays[key] />
+      </#if> 
+</#list>
+<#if (maxCount<5)>
+     <#assign linesCount=maxCount />
+</#if>
+<svg width="400px" height="200px" viewBox="0 0 1200 1000" version="1.1" xmlns="http://www.w3.org/2000/svg">
+	<#list keys as key>
+		<#assign index=key_index barWidth=157 />
+		<#assign xRect=(index*barWidth) />    
+		<#if (maxCount>0 && usersCountPerDays[key]??)>
+			<#assign yRect=(usersCountPerDays[key]*maxHeight/maxCount)?floor />      
+		<#else>
+			<#assign yRect=0 />           
+		</#if>
+		<rect x="${xRect?string.computer}" y="${(maxHeight-yRect)?string.computer}" width="${barWidth?string.computer}" height="${yRect?string.computer}" fill="#FF7F27"  />
+                <text x="${(xRect+barWidth/2)?floor?string.computer}" y="${940}" text-anchor="middle" font-size="50"> ${(dates[index])?date?string("dd")} </text> 
+        </#list>
+        <path d="M10,903 L1190,903" stroke="#333333" stroke-width="2" />
+         <#list 1..linesCount as lineIndex>
+             <#assign lineValue= (maxCount/linesCount)?ceiling yLine=(maxHeight-(maxHeight/linesCount)*lineIndex) />
+              <path d="M10,${yLine?string.computer} L1190,${yLine?string.computer}" stroke="#333333" stroke-width="0.5" />
+         </#list>
+         <text x="1190" y="50" text-anchor="end" font-size="50"> ${maxCount} </text>
+ 
+ </svg>

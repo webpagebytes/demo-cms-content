@@ -1,0 +1,67 @@
+<html>
+<@wpbModule externalKey="d7101b49-8369-4d64-ac1e-87bd88c54b9c" name="head" />
+ 
+<body>
+<@wpbModule externalKey="c83c01ce-8696-4726-a6c0-c8575e829db7" name="header" />
+
+<div class="accountcontent">
+	<@wpbModule externalKey="1a084d80-8679-4d9d-b49e-ebb5601aee61" name="main-menu" />
+	<div class="menudetails">
+                  <div class="detailsinner">
+                           <@wpbModule externalKey="cbd75bd6-95b8-49c1-85df-269e8a2138fd" name="app-warning" />
+	<#if wpbAppModel["invalidId"]??>
+                           <div class="htitle">
+				<div class="message message-error"> ${wpbMessages["General.error"]?html} </div>
+				<div class="info-message">
+					${wpbMessages["Error.transaction.invalid"]?html}
+				</div>
+		           </div>
+           <#elseif wpbAppModel["notAllowed"]??>
+                           <div class="htitle">
+				<div class="message message-error"> ${wpbMessages["General.error"]?html} </div>
+				<div class="info-message">
+					${wpbMessages["Error.permission"]?html}
+				</div>
+		           </div>
+        <#else>
+        <#assign operation=wpbAppModel["operation"]!{} />
+        <#assign account=wpbAppModel["account"]!{} />
+       		        <div class="htitle">
+                                <#if operation.type == "DEPOSIT">
+				    <div class="message message-success"> ${wpbMessages["Deposits.success"]?html} </div>
+				    <div class="info-message">
+                                         <#assign amountStr=("<span class=\"info-important\">" + operation.amount?string.currency + "</span>") />
+					 ${wpbFormatText( wpbMessages["Deposits.deposit"]?html, amountStr)}
+				     </div>
+				     <div class="info-message">
+					 ${wpbMessages["General.reference"]?html}# ${operation.id?string.computer}
+				     </div>
+                                <#else>
+				    <div class="message message-success"> ${wpbMessages["Withdrawals.success"]?html} </div>
+				    <div class="info-message">
+                                         <#assign amountStr=("<span class=\"info-important\">" + operation.amount?string.currency + "</span>") />
+					 ${wpbFormatText( wpbMessages["Withdrawals.withdraw"]?html, amountStr)}
+				     </div>
+				     <div class="info-message">
+					 ${wpbMessages["General.reference"]?html}# ${operation.id?string.computer}
+				     </div>                                
+                                </#if>
+				<div class="info-message">
+                                         <#assign clickStr=("<a href=\"./payments\">" +  wpbMessages["General.click.here"]?html + "</a>" ) />
+					 ${wpbFormatText( wpbMessages["Payments.start.payment"]?html, clickStr)}
+				</div>	
+			</div>
+			<div class="balance">
+			${wpbMessages["Home.account.balance"]?html} <span> ${account.balance?string.currency} </span>
+			</div>
+			<div class="clear"> </div>
+
+        </#if>      
+                  </div>
+        </div>
+	<div class="clear"></div>
+</div>
+<@wpbModule externalKey="adfd6ce3-948b-4247-9109-c71d3c5bfdb0" name="footer" />
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">Withdrawals.withdraw</entry>
+<entry key="lastModified">1412852959254</entry>
+<entry key="lcid">fr</entry>
+<entry key="value">Vous avez retiré {0} de votre compte</entry>
+<entry key="externalKey">34767903-d270-45a8-8ec8-68502307ae68</entry>
+</properties>

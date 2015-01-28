@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="enabled">1</entry>
+<entry key="resourceExternalKey">1921d61b-e40f-4cad-82eb-c43f450abd90</entry>
+<entry key="lastModified">1405086932263</entry>
+<entry key="resourceType">3</entry>
+<entry key="uri">/{language}/deposits</entry>
+<entry key="httpOperation">GET</entry>
+<entry key="externalKey">a4b3efda-5c79-48d7-8278-8aaad7156425</entry>
+<entry key="controllerClass">com.webpagebytes.wpbsample.controllers.GetAccountController</entry>
+</properties>

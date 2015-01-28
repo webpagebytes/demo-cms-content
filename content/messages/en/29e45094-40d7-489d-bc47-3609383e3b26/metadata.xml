@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">Error.email.alreadyExists</entry>
+<entry key="lastModified">1405631203574</entry>
+<entry key="lcid">en</entry>
+<entry key="value">Email already registered</entry>
+<entry key="externalKey">29e45094-40d7-489d-bc47-3609383e3b26</entry>
+</properties>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">Error.destination.thesame</entry>
+<entry key="lastModified">1412842910794</entry>
+<entry key="lcid">fr</entry>
+<entry key="value">Bénéficiaire ne peut pas être le même que l'utilisateur courant</entry>
+<entry key="externalKey">093c35a6-6399-42a2-b07e-b827cc57ee71</entry>
+</properties>

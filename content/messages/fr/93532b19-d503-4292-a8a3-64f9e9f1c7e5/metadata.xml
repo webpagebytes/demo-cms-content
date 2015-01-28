@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">Payments.new.payment</entry>
+<entry key="lastModified">1412860623443</entry>
+<entry key="lcid">fr</entry>
+<entry key="value">Pour commencer un nouveau paiement {0}</entry>
+<entry key="externalKey">93532b19-d503-4292-a8a3-64f9e9f1c7e5</entry>
+</properties>

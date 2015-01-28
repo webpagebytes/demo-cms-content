@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="enabled">1</entry>
+<entry key="resourceExternalKey">6d1665f9-7c15-447e-9f85-e9cec5cecb74</entry>
+<entry key="lastModified">1404767002295</entry>
+<entry key="resourceType">3</entry>
+<entry key="uri">/home</entry>
+<entry key="httpOperation">GET</entry>
+<entry key="externalKey">b8f9783f-c757-4217-a2b9-565a5b8ef87c</entry>
+<entry key="controllerClass">com.webpagebytes.wpbsample.controllers.HomeController</entry>
+</properties>

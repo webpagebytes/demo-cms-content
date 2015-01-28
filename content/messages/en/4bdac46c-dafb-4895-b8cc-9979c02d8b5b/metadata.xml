@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment></comment>
+<entry key="name">Error.amount.zeronotallowed</entry>
+<entry key="lastModified">1405089344938</entry>
+<entry key="lcid">en</entry>
+<entry key="value">Amount cannot be 0</entry>
+<entry key="externalKey">4bdac46c-dafb-4895-b8cc-9979c02d8b5b</entry>
+</properties>

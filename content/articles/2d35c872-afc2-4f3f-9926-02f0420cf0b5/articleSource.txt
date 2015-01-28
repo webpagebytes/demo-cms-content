@@ -1,0 +1,3 @@
+<p>
+	 You can use the user name <strong>testUser</strong>
+</p>
