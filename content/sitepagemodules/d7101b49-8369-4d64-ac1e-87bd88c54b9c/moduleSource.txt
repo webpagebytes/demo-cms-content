@@ -1,7 +1,8 @@
 <head>  
   <meta charset="utf-8">
+  <title> ${wpbMessages["General.title"]?html} </title>
   <#assign basePath=wpbRequest["WPB_GLOBAL_BASE_URL"] >
-  <link rel="shortcut icon" href="<@wpbUri uriPattern="/img/{**}" fileUri="img/favicon.ico">${basePath}/img/favicon.ico</@>">
+  <link rel="shortcut icon" href="<@wpbUri uriFile="/img/favicon.ico">${basePath}/img/favicon.ico</@>">
   <link href="<@wpbUri uriPattern="/css/style.css">${basePath}/css/style.css</@>" rel="stylesheet">
-  <link href="<@wpbUri uriPattern="/fa/{**}" uriFile="fa/css/font-awesome.min.css">${basePath}/fa/css/font-awesome.min.css</@>" rel="stylesheet">
+  <link href="<@wpbUri uriFile="fa/css/font-awesome.min.css">${basePath}/fa/css/font-awesome.min.css</@>" rel="stylesheet">
 </head>

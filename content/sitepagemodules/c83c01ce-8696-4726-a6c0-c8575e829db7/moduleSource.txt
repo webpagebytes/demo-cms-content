@@ -8,6 +8,7 @@
 			<li class="sel"> <a href="${basePath}/"> Demo application </a> </li>
 			<li> <a href="${basePath}/../doc/start"> Documentation </a> </li>
 			<li> <a href="${basePath}/../download"> Download </a> </li>
+			<li> <a href="${basePath}/../tutorials"> Tutorials </a> </li>
 		</ul>
 	</div> 
        <div class="clear"></div">
