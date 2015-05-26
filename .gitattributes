@@ -1,0 +1,18 @@
+/content/articles/*/articleSource.txt eol=lf
+/content/articles/*/metadata.xml eol=lf
+/content/files/*/metadata.xml eol=lf
+/content/articles/*/metadata.xml eol=lf
+/content/messages/*/*/metadata.xml eol=lf
+/content/settings/globals/*/metadata.xml eol=lf
+/content/settings/locales/metadata.xml eol=lf
+/content/sitepagemodules/*/metadata.xml eol=lf
+/content/sitepagemodules/*/moduleSource.txt eol=lf
+/content/sitepages/*/metadata.xml eol=lf
+/content/sitepages/*/pageSource.txt eol=lf
+/content/sitepages/*/parameters/*/metadata.xml eol=lf
+/content/siteuris/*/metadata.xml eol=lf
+/content/siteuris/*/parameters/*/metadata.xml eol=lf
+
+
+
+
