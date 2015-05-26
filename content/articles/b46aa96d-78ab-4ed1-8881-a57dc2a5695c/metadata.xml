@@ -2,6 +2,7 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment></comment>
+<entry key="version"></entry>
 <entry key="lastModified">1420926438852</entry>
 <entry key="externalKey">b46aa96d-78ab-4ed1-8881-a57dc2a5695c</entry>
 <entry key="title">what's this - dummy operation</entry>

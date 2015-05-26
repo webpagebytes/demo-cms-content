@@ -2,6 +2,7 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment></comment>
+<entry key="version"></entry>
 <entry key="name">Error.newsLetter.value</entry>
 <entry key="lastModified">1419950670791</entry>
 <entry key="lcid">fr</entry>

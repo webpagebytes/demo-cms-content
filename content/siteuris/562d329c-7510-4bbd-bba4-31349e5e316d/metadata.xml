@@ -2,12 +2,13 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment></comment>
-<entry key="enabled">1</entry>
-<entry key="resourceExternalKey">6d1665f9-7c15-447e-9f85-e9cec5cecb74</entry>
-<entry key="lastModified">1404767020747</entry>
+<entry key="httpOperation">GET</entry>
 <entry key="resourceType">3</entry>
 <entry key="uri">/{language}/home</entry>
-<entry key="httpOperation">GET</entry>
-<entry key="externalKey">562d329c-7510-4bbd-bba4-31349e5e316d</entry>
+<entry key="lastModified">1404767020747</entry>
+<entry key="resourceExternalKey">6d1665f9-7c15-447e-9f85-e9cec5cecb74</entry>
+<entry key="enabled">1</entry>
+<entry key="version"></entry>
 <entry key="controllerClass">com.webpagebytes.wpbsample.controllers.HomeController</entry>
+<entry key="externalKey">562d329c-7510-4bbd-bba4-31349e5e316d</entry>
 </properties>

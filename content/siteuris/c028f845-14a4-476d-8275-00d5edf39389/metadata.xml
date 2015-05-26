@@ -2,12 +2,13 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment></comment>
-<entry key="enabled">1</entry>
-<entry key="resourceExternalKey"></entry>
-<entry key="lastModified">1411329769325</entry>
+<entry key="httpOperation">GET</entry>
 <entry key="resourceType">3</entry>
 <entry key="uri">/statements-pdf</entry>
-<entry key="httpOperation">GET</entry>
-<entry key="externalKey">c028f845-14a4-476d-8275-00d5edf39389</entry>
+<entry key="lastModified">1411329769325</entry>
+<entry key="resourceExternalKey"></entry>
+<entry key="enabled">1</entry>
+<entry key="version"></entry>
 <entry key="controllerClass">com.webpagebytes.wpbsample.controllers.AccountStatementPDFController</entry>
+<entry key="externalKey">c028f845-14a4-476d-8275-00d5edf39389</entry>
 </properties>

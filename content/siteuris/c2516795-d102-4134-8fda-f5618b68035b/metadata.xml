@@ -2,12 +2,13 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment></comment>
-<entry key="enabled">1</entry>
-<entry key="resourceExternalKey"></entry>
-<entry key="lastModified">1405089441283</entry>
+<entry key="httpOperation">POST</entry>
 <entry key="resourceType">3</entry>
 <entry key="uri">/deposit</entry>
-<entry key="httpOperation">POST</entry>
-<entry key="externalKey">c2516795-d102-4134-8fda-f5618b68035b</entry>
+<entry key="lastModified">1405089441283</entry>
+<entry key="resourceExternalKey"></entry>
+<entry key="enabled">1</entry>
+<entry key="version"></entry>
 <entry key="controllerClass">com.webpagebytes.wpbsample.controllers.PerformDepositController</entry>
+<entry key="externalKey">c2516795-d102-4134-8fda-f5618b68035b</entry>
 </properties>

@@ -2,12 +2,13 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment></comment>
-<entry key="enabled">1</entry>
-<entry key="resourceExternalKey"></entry>
-<entry key="lastModified">1412607896026</entry>
+<entry key="httpOperation">GET</entry>
 <entry key="resourceType">3</entry>
 <entry key="uri">/{language}/report-all-image</entry>
-<entry key="httpOperation">GET</entry>
-<entry key="externalKey">bf48e02a-1d74-4f6b-957c-68efbe8f4a6e</entry>
+<entry key="lastModified">1412607896026</entry>
+<entry key="resourceExternalKey"></entry>
+<entry key="enabled">1</entry>
+<entry key="version"></entry>
 <entry key="controllerClass">com.webpagebytes.wpbsample.controllers.ReportAllController</entry>
+<entry key="externalKey">bf48e02a-1d74-4f6b-957c-68efbe8f4a6e</entry>
 </properties>

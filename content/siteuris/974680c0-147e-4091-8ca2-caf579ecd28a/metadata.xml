@@ -2,12 +2,13 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment></comment>
-<entry key="enabled">1</entry>
-<entry key="resourceExternalKey">7975951e-c806-4ea5-a905-31d5b8c7b574</entry>
-<entry key="lastModified">1419864645960</entry>
+<entry key="httpOperation">GET</entry>
 <entry key="resourceType">2</entry>
 <entry key="uri">/img/{**}</entry>
-<entry key="httpOperation">GET</entry>
-<entry key="externalKey">974680c0-147e-4091-8ca2-caf579ecd28a</entry>
+<entry key="lastModified">1419864645960</entry>
+<entry key="resourceExternalKey">7975951e-c806-4ea5-a905-31d5b8c7b574</entry>
+<entry key="enabled">1</entry>
+<entry key="version"></entry>
 <entry key="controllerClass"></entry>
+<entry key="externalKey">974680c0-147e-4091-8ca2-caf579ecd28a</entry>
 </properties>

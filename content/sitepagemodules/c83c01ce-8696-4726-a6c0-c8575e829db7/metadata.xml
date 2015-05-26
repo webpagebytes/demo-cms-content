@@ -2,8 +2,9 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment></comment>
+<entry key="version">0a7e076d-d2e5-49c8-95b2-e269cf441861</entry>
 <entry key="name">header</entry>
-<entry key="lastModified">1423653577276</entry>
+<entry key="lastModified">1432672523226</entry>
 <entry key="isTemplateSource">1</entry>
 <entry key="externalKey">c83c01ce-8696-4726-a6c0-c8575e829db7</entry>
 </properties>

@@ -2,6 +2,7 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment></comment>
+<entry key="version"></entry>
 <entry key="name">General.withdrawals.make</entry>
 <entry key="lastModified">1412844784203</entry>
 <entry key="lcid">en</entry>

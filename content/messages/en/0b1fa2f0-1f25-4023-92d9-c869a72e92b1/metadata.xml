@@ -2,6 +2,7 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment></comment>
+<entry key="version"></entry>
 <entry key="name">Reports.withdrawals.amount</entry>
 <entry key="lastModified">1412769527079</entry>
 <entry key="lcid">en</entry>

@@ -2,6 +2,7 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment></comment>
+<entry key="version"></entry>
 <entry key="name">statements-transactions-page</entry>
 <entry key="lastModified">1421964106218</entry>
 <entry key="isTemplateSource">1</entry>

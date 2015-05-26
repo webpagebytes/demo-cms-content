@@ -2,6 +2,7 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment></comment>
+<entry key="version"></entry>
 <entry key="name">Profile.edit.profile</entry>
 <entry key="lastModified">1419948205119</entry>
 <entry key="lcid">en</entry>

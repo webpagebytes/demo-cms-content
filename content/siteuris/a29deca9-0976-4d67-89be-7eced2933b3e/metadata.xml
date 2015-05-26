@@ -2,12 +2,13 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment></comment>
-<entry key="enabled">1</entry>
-<entry key="resourceExternalKey">275cc2f1-659a-4f52-ad44-86178a346e79</entry>
-<entry key="lastModified">1414273387508</entry>
+<entry key="httpOperation">GET</entry>
 <entry key="resourceType">3</entry>
 <entry key="uri">/notification</entry>
-<entry key="httpOperation">GET</entry>
-<entry key="externalKey">a29deca9-0976-4d67-89be-7eced2933b3e</entry>
+<entry key="lastModified">1414273387508</entry>
+<entry key="resourceExternalKey">275cc2f1-659a-4f52-ad44-86178a346e79</entry>
+<entry key="enabled">1</entry>
+<entry key="version"></entry>
 <entry key="controllerClass">com.webpagebytes.wpbsample.controllers.NotificationLastDayContentController</entry>
+<entry key="externalKey">a29deca9-0976-4d67-89be-7eced2933b3e</entry>
 </properties>

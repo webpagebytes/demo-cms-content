@@ -2,8 +2,9 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment></comment>
+<entry key="version">dedba5c9-dd76-4c95-ab61-a1e8b31054f4</entry>
 <entry key="name">Deposits.deposit</entry>
-<entry key="lastModified">1416519343261</entry>
+<entry key="lastModified">1432672538843</entry>
 <entry key="lcid">en</entry>
 <entry key="value">You have deposited {0} in your account.</entry>
 <entry key="externalKey">1a1e56e8-1c82-400b-b82b-355f1d3cb04b</entry>

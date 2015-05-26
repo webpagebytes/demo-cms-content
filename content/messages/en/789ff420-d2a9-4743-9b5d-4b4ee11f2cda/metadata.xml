@@ -2,6 +2,7 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment></comment>
+<entry key="version"></entry>
 <entry key="name">Email.confirmEmail</entry>
 <entry key="lastModified">1421874291705</entry>
 <entry key="lcid">en</entry>

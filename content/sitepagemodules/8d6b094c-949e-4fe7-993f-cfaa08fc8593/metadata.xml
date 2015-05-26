@@ -2,6 +2,7 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment></comment>
+<entry key="version"></entry>
 <entry key="name">svg-deposit-withdrawal-count</entry>
 <entry key="lastModified">1421614131088</entry>
 <entry key="isTemplateSource">1</entry>

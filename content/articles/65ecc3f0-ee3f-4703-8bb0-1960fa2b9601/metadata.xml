@@ -2,6 +2,7 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment></comment>
+<entry key="version"></entry>
 <entry key="lastModified">1420928698778</entry>
 <entry key="externalKey">65ecc3f0-ee3f-4703-8bb0-1960fa2b9601</entry>
 <entry key="title">License</entry>

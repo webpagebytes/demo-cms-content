@@ -2,6 +2,7 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment></comment>
+<entry key="version"></entry>
 <entry key="supportedLanguages">fr,en</entry>
 <entry key="lastModified">1404049378484</entry>
 <entry key="defaultLanguage">en</entry>

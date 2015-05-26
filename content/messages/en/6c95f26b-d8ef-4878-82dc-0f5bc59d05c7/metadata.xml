@@ -2,6 +2,7 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment></comment>
+<entry key="version"></entry>
 <entry key="name">Error.destination.doesnotexist</entry>
 <entry key="lastModified">1408566086190</entry>
 <entry key="lcid">en</entry>

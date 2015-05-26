@@ -2,6 +2,7 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment></comment>
+<entry key="version"></entry>
 <entry key="name">Login.form.title</entry>
 <entry key="lastModified">1404027300501</entry>
 <entry key="lcid">en</entry>

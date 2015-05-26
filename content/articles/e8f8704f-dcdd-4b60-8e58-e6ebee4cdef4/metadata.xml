@@ -2,6 +2,7 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment></comment>
+<entry key="version"></entry>
 <entry key="lastModified">1420902537718</entry>
 <entry key="externalKey">e8f8704f-dcdd-4b60-8e58-e6ebee4cdef4</entry>
 <entry key="title">what's this - dynamic urls</entry>

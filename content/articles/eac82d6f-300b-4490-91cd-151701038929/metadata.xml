@@ -2,6 +2,7 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment></comment>
+<entry key="version"></entry>
 <entry key="lastModified">1420724963363</entry>
 <entry key="externalKey">eac82d6f-300b-4490-91cd-151701038929</entry>
 <entry key="title">what's this - pagemodules</entry>

@@ -2,6 +2,7 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment></comment>
+<entry key="version"></entry>
 <entry key="name">General.payments.make</entry>
 <entry key="lastModified">1412847236938</entry>
 <entry key="lcid">fr</entry>

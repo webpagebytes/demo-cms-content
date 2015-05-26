@@ -2,6 +2,7 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment></comment>
+<entry key="version"></entry>
 <entry key="name">account-statement-pdf-fo</entry>
 <entry key="lastModified">1419866031702</entry>
 <entry key="isTemplateSource">1</entry>

@@ -2,12 +2,13 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment></comment>
-<entry key="enabled">1</entry>
-<entry key="resourceExternalKey"></entry>
-<entry key="lastModified">1405088104306</entry>
+<entry key="httpOperation">POST</entry>
 <entry key="resourceType">3</entry>
 <entry key="uri">/{language}/withdraw</entry>
-<entry key="httpOperation">POST</entry>
-<entry key="externalKey">5f28656e-798b-4b76-b931-d2d026c9c9ae</entry>
+<entry key="lastModified">1405088104306</entry>
+<entry key="resourceExternalKey"></entry>
+<entry key="enabled">1</entry>
+<entry key="version"></entry>
 <entry key="controllerClass">com.webpagebytes.wpbsample.controllers.PerformWithdrawalController</entry>
+<entry key="externalKey">5f28656e-798b-4b76-b931-d2d026c9c9ae</entry>
 </properties>

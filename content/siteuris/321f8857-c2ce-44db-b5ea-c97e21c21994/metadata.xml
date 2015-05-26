@@ -2,12 +2,13 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment></comment>
-<entry key="enabled">1</entry>
-<entry key="resourceExternalKey"></entry>
-<entry key="lastModified">1419947789772</entry>
+<entry key="httpOperation">GET</entry>
 <entry key="resourceType">3</entry>
 <entry key="uri">/{language}/changeProfile</entry>
-<entry key="httpOperation">GET</entry>
-<entry key="externalKey">321f8857-c2ce-44db-b5ea-c97e21c21994</entry>
+<entry key="lastModified">1419947789772</entry>
+<entry key="resourceExternalKey"></entry>
+<entry key="enabled">1</entry>
+<entry key="version"></entry>
 <entry key="controllerClass">com.webpagebytes.wpbsample.controllers.GetProfileController</entry>
+<entry key="externalKey">321f8857-c2ce-44db-b5ea-c97e21c21994</entry>
 </properties>

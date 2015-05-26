@@ -2,6 +2,7 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment></comment>
+<entry key="version"></entry>
 <entry key="name">Reports.filter7days</entry>
 <entry key="lastModified">1412767748001</entry>
 <entry key="lcid">fr</entry>

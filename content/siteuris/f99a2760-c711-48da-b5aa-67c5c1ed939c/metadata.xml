@@ -2,12 +2,13 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment></comment>
-<entry key="enabled">1</entry>
-<entry key="resourceExternalKey"></entry>
-<entry key="lastModified">1420754802985</entry>
+<entry key="httpOperation">GET</entry>
 <entry key="resourceType">3</entry>
 <entry key="uri">/{language}/statements-email</entry>
-<entry key="httpOperation">GET</entry>
-<entry key="externalKey">f99a2760-c711-48da-b5aa-67c5c1ed939c</entry>
+<entry key="lastModified">1420754802985</entry>
+<entry key="resourceExternalKey"></entry>
+<entry key="enabled">1</entry>
+<entry key="version"></entry>
 <entry key="controllerClass">com.webpagebytes.wpbsample.controllers.AccountStatementEmailController</entry>
+<entry key="externalKey">f99a2760-c711-48da-b5aa-67c5c1ed939c</entry>
 </properties>

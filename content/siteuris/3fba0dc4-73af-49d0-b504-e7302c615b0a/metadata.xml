@@ -2,12 +2,13 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment></comment>
-<entry key="enabled">1</entry>
-<entry key="resourceExternalKey"></entry>
-<entry key="lastModified">1404680810288</entry>
+<entry key="httpOperation">POST</entry>
 <entry key="resourceType">3</entry>
 <entry key="uri">/{language}/login</entry>
-<entry key="httpOperation">POST</entry>
-<entry key="externalKey">3fba0dc4-73af-49d0-b504-e7302c615b0a</entry>
+<entry key="lastModified">1404680810288</entry>
+<entry key="resourceExternalKey"></entry>
+<entry key="enabled">1</entry>
+<entry key="version"></entry>
 <entry key="controllerClass">com.webpagebytes.wpbsample.controllers.LoginController</entry>
+<entry key="externalKey">3fba0dc4-73af-49d0-b504-e7302c615b0a</entry>
 </properties>

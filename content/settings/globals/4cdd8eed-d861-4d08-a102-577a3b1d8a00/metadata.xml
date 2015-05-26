@@ -3,6 +3,7 @@
 <properties>
 <comment></comment>
 <entry key="ownerExternalKey"></entry>
+<entry key="version"></entry>
 <entry key="localeType">0</entry>
 <entry key="name">NOTIFICATIONS_EMAIL_SUBJECT_GUID</entry>
 <entry key="lastModified">1413988332873</entry>

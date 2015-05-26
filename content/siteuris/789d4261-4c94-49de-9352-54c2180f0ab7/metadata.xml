@@ -2,12 +2,13 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment></comment>
-<entry key="enabled">1</entry>
-<entry key="resourceExternalKey"></entry>
-<entry key="lastModified">1412329849409</entry>
+<entry key="httpOperation">GET</entry>
 <entry key="resourceType">3</entry>
 <entry key="uri">/report-deposits-withdrawals-{interval}</entry>
-<entry key="httpOperation">GET</entry>
-<entry key="externalKey">789d4261-4c94-49de-9352-54c2180f0ab7</entry>
+<entry key="lastModified">1412329849409</entry>
+<entry key="resourceExternalKey"></entry>
+<entry key="enabled">1</entry>
+<entry key="version"></entry>
 <entry key="controllerClass">com.webpagebytes.wpbsample.controllers.ReportDWController</entry>
+<entry key="externalKey">789d4261-4c94-49de-9352-54c2180f0ab7</entry>
 </properties>

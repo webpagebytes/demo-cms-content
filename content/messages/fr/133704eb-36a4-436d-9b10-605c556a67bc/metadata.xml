@@ -2,6 +2,7 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment></comment>
+<entry key="version"></entry>
 <entry key="name">Menu.payments</entry>
 <entry key="lastModified">1404028975268</entry>
 <entry key="lcid">fr</entry>
