@@ -3,11 +3,7 @@
 	<div class="logo"> <a href="http://webpagebytes.com"> webpagebytes </a> </div>
 	<div class="menu">
 		<ul class="menu-list">
-			<li> <a href="${basePath}/../getting-started"> Getting started </a> </li>
-                        <li> <a href="${basePath}/../installation"> Installation </a> </li>
 			<li class="sel"> <a href="${basePath}/"> Demo application </a> </li>
-			<li> <a href="${basePath}/../doc/start"> Documentation </a> </li>
-			<li> <a href="${basePath}/../download"> Download </a> </li>
 		</ul>
 	</div> 
        <div class="clear"></div">
